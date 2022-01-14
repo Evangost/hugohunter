@@ -3,96 +3,144 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
-    <title>Главная</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
+    <title>Main page</title>
 </head>
 <body class="loaded">
 <!-- BODY -->
 <div class="main-wrapper">
     <!-- HEADER -->
     <header class="header">
-        <div class="container bg-light">
-            <h1>Header Title</h1>
+        <div class="container">
+            <div class="header-container">
+                <a href="index.html" class="logo">
+                    <picture>
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/logo.svg') %>"
+                             alt="alt-image" title="title-image">
+                    </picture>
+                </a>
+
+                <div class="header-container__menu">
+                    <ul class="main-menu">
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Customers</a></li>
+                        <li><a href="#">Blog/News</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    <div class="header-action">
+
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
     <!-- HEADER END -->
 
     <!-- CONTENT -->
     <main class="content">
-        <div class="section">
-            <div class="container">
-                <h2>Section Slider</h2>
 
-                <div class="main-slider swiper-container">
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
+
+        <div hidden>
+            <div class="section">
+                <div class="container">
+                    <h2>Section Slider</h2>
+
+                    <div class="main-slider swiper-container">
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <picture>
+                                    <img src="<%= require('./img/default.svg') %>"
+                                         data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example"
+                                         title="example">
+                                </picture>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <picture>
+                                    <img src="<%= require('./img/default.svg') %>"
+                                         data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example"
+                                         title="example">
+                                </picture>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <picture>
+                                    <img src="<%= require('./img/default.svg') %>"
+                                         data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example"
+                                         title="example">
+                                </picture>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <picture>
+                                    <img src="<%= require('./img/default.svg') %>"
+                                         data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example"
+                                         title="example">
+                                </picture>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <picture>
+                                    <img src="<%= require('./img/default.svg') %>"
+                                         data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example"
+                                         title="example">
+                                </picture>
+                            </div>
                         </div>
 
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
+                        <div class="swiper-pagination"></div>
+
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                        <!--<div class="swiper-scrollbar"></div>-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="container">
+                    <h2>Section Pictures</h2>
+                    <picture>
+                        <img src="<%= require('./img/default.svg') %>"
+                             data-src="<%= require('./img/placeholder-img.jpg') %>" alt="loader" title="loader">
+                    </picture>
+
+                    <svg>
+                        <use xlink:href="img/spritemap.svg#sprite-ok"></use>
+                    </svg>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <button class="button-site button-site_fill">Request a quote</button>
+                            <button class="button-site button-site_outline">Request a quote</button>
                         </div>
 
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
+                        <div class="col-md-4">
+                            <button class="button-site button-site_around">Personal offer
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
+                                </svg>
+                            </button>
                         </div>
 
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
+                        <div class="col-md-4">
+                            <button class="button-submit button-submit_sm">Submit</button>
+                            <button class="button-submit">Submit</button>
+                            <button class="button-submit button-submit_lg">Submit</button>
                         </div>
                     </div>
 
-                    <div class="swiper-pagination"></div>
+                    <button class="button-link">Request a quote</button>
+                    <a href="#" class="button-link">Request a quote</a>
 
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-
-                    <!--<div class="swiper-scrollbar"></div>-->
+                    <div>
+                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquam architecto beatae consequuntur culpa dolore ea eius harum illum in iure laboriosam laborum libero, maiores necessitatibus non, nostrum omnis optio praesentium quam rem rerum ullam velit voluptates? Aspernatur debitis deleniti, dolores eligendi facilis nobis obcaecati quia quibusdam reprehenderit soluta.</span>
+                    </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="container">
-                <h2>Section Pictures</h2>
-                <picture>
-                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="loader" title="loader">
-                </picture>
-
-                <svg>
-                    <use xlink:href="img/spritemap.svg#sprite-ok"></use>
-                </svg>
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="container">
-                <h2>Section Range slider</h2>
-
-                <div class="slider-range"><input type="range" value="75" min="1" max="100"></div>
-                <div class="slider-range"><input type="range" value="275" max="1000"></div>
-                <div class="slider-range"><input type="range"></div>
-
-                <br>
-
-                <div class="slider-handles"><input type="range" min="2000" max="10000"></div>
-                <div class="slider-handles"><input type="range" max="1000"></div>
-                <div class="slider-handles"><input type="range"></div>
             </div>
         </div>
     </main>
@@ -100,8 +148,8 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container bg-info">
-            <h3 class="m-0">Footer Title</h3>
+        <div class="container">
+
         </div>
     </footer>
     <!-- FOOTER END -->

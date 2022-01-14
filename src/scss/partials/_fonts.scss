@@ -1,2 +1,59 @@
 $fonts-path: '../fonts/';
 
+
+
+@font-face {
+  font-family:'Poppins';
+  src: url('#{$fonts-path}Poppins Regular.eot');
+  src: url('#{$fonts-path}Poppins Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}Poppins Regular.woff2') format('woff2'),
+  url('#{$fonts-path}Poppins Regular.woff') format('woff'),
+  url('#{$fonts-path}Poppins Regular.ttf') format('truetype'),
+  url('#{$fonts-path}Poppins Regular.svg#Poppins Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2212;
+}
+@font-face {
+  font-family:'Poppins';
+  src: url('#{$fonts-path}Poppins Medium.eot');
+  src: url('#{$fonts-path}Poppins Medium.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}Poppins Medium.woff2') format('woff2'),
+  url('#{$fonts-path}Poppins Medium.woff') format('woff'),
+  url('#{$fonts-path}Poppins Medium.ttf') format('truetype'),
+  url('#{$fonts-path}Poppins Medium.svg#Poppins Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2212;
+}
+
+@font-face {
+  font-family:'Poppins';
+  src: url('#{$fonts-path}Poppins SemiBold.eot');
+  src: url('#{$fonts-path}Poppins SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}Poppins SemiBold.woff2') format('woff2'),
+  url('#{$fonts-path}Poppins SemiBold.woff') format('woff'),
+  url('#{$fonts-path}Poppins SemiBold.ttf') format('truetype'),
+  url('#{$fonts-path}Poppins SemiBold.svg#Poppins SemiBold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2212;
+}
+
+@font-face {
+  font-family:'Poppins';
+  src: url('#{$fonts-path}Poppins Bold.eot');
+  src: url('#{$fonts-path}Poppins Bold.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}Poppins Bold.woff2') format('woff2'),
+  url('#{$fonts-path}Poppins Bold.woff') format('woff'),
+  url('#{$fonts-path}Poppins Bold.ttf') format('truetype'),
+  url('#{$fonts-path}Poppins Bold.svg#Poppins Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2212;
+}
+

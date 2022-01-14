@@ -6,7 +6,6 @@ import 'jquery-ui/ui/effect'
 import 'bootstrap';
 import 'popper.js';
 import Swiper from 'swiper/dist/js/swiper.min';
-import noUiSlider from 'nouislider';
 
 
 $(window).on('load', function () {

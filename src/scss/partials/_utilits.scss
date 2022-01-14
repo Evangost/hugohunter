@@ -94,3 +94,107 @@
   font-size: 2.5rem;
   font-weight: $font-weight-normal;
 }
+
+.button {
+  &-site {
+    padding: 16px 48px;
+    background: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    outline: none !important;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    transition: $transition-base;
+
+    &:hover {
+      background: black;
+      color: white;
+    }
+
+    &:active {
+      background: #2d2d2d;
+      color: white;
+    }
+
+    &_fill {
+      background: black;
+      color: white;
+
+      &:hover {
+        background: #151515;
+        color: white;
+      }
+    }
+
+    &_outline {
+      background: none;
+      border-color: black;
+      color: black;
+    }
+
+    &_around {
+      padding: 9px 50px;
+      border-color: black;
+      border-radius: 50px;
+
+      svg {
+        width: 18px;
+        height: 18px;
+        margin-left: 10px;
+        fill: black;
+        transition: $transition-base;
+      }
+
+      &:hover {
+        svg {
+          fill: white;
+        }
+      }
+    }
+  }
+
+  &-submit {
+    padding: 15px 95px;
+    background: $main-first-color;
+    border: none;
+    outline: none !important;
+    color: white;
+    font-size: 18px;
+    line-height: 27px;
+    transition: $transition-base;
+
+    &:hover {
+      background: #d01817;
+    }
+
+    &:active {
+      background: #c51716;
+    }
+
+    &_sm {
+      padding: 11px 95px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &_lg {
+      padding: 19px 95px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  &-link {
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+    text-decoration: none !important;
+    transition: $transition-base;
+
+    &:hover {}
+
+    &:active {}
+  }
+}

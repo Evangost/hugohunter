@@ -9,3 +9,53 @@ header.header {
   width: 100%;
   z-index: 100;
 }
+
+.logo {
+  img {
+    width: 192px;
+    height: 25px;
+  }
+}
+
+.header-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+
+  &__menu {
+  display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+    padding-left: 83px;
+  }
+}
+
+
+.main-menu {
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  li {
+    &:not(:last-child){
+      margin-right: 35px;
+    }
+    a {
+
+    }
+  }
+}
+
+.header-action {
+
+}
+
+
