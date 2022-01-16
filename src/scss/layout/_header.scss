@@ -23,11 +23,12 @@ header.header {
   justify-content: space-between;
   align-items: center;
   align-content: center;
+  margin-top: 19px;
 
   &__menu {
-  display: inline-flex;
+    display: inline-flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-content: center;
     align-items: center;
     flex: 1 1 auto;
@@ -44,18 +45,51 @@ header.header {
   align-items: center;
   padding: 0;
   margin: 0;
+
   li {
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-right: 35px;
     }
-    a {
 
+    a {
+      font-size: 14px;
+      line-height: 21px;
     }
   }
 }
 
 .header-action {
-
+  display: flex;
+  width: 410px;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.phone{
+  width: 139px;
+  height: 27px;
+  a{
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 600;
+  }
 }
 
+.button-site_outline{
+  width: 135px;
+  height: 40px;
+  font-size: 14px;
+  line-height: 21px;
+  padding:0;
+}
+.button-site_fill{
+  width: 98px;
+  height: 40px;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 0;
+}
 
