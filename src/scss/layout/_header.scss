@@ -4,10 +4,11 @@
 header.header {
   order: 1;
   -webkit-order: 1;
-  position: relative;
+  position:absolute;
   min-width: 320px;
   width: 100%;
   z-index: 100;
+  padding-top: 19px;
 }
 
 .logo {
@@ -23,16 +24,18 @@ header.header {
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  margin-top: 19px;
+
+
+
 
   &__menu {
     display: inline-flex;
+    width: 100%;
     flex-flow: row wrap;
     justify-content: space-between;
     align-content: center;
     align-items: center;
-    flex: 1 1 auto;
-    padding-left: 83px;
+    padding-left: 85px;
   }
 }
 
@@ -66,7 +69,6 @@ header.header {
   align-content: center;
   align-items: center;
   padding: 0;
-  margin: 0;
 }
 .phone{
   width: 139px;

@@ -1,0 +1,125 @@
+.section-about-us {
+  margin: 90px 0;
+}
+
+.about-us {
+  width: 100%;
+
+  hr {
+    width: 100%;
+    background: #E0E0E0;
+  }
+}
+
+.section-input {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  align-items: flex-start;
+
+  &__text {
+    display: flex;
+    max-width: 660px;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+
+    .title {
+      font-size: 48px;
+      line-height: 58px;
+      margin: 0;
+    }
+
+    .article {
+      font-size: 20px;
+      line-height: 26px;
+      margin: 20px 0 0;
+    }
+  }
+  hr {
+    color:#4F4F4F;
+  }
+}
+
+.form-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-self: center;
+  align-content: center;
+  background: #F8F8F8;
+  width: 555px;
+  height: 360px;
+  padding: 62px 32px 74px;
+
+  p {
+    font-size: 26px;
+    line-height: 39px;
+    font-weight: 500;
+    color: #333333;
+    margin-bottom: 20px;
+  }
+
+  span {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #828282;
+    margin: 0 0 0 10px;
+
+    .button-submit {
+      width: 485px;
+    }
+  }
+}
+
+.form-control {
+  border: none;
+  height: 23px;
+  border-bottom: 1px solid #828282;
+  border-radius: 0;
+  box-shadow: none !important;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #BDBDBD;
+  background: #F8F8F8;
+  margin-bottom: 30px;
+
+
+  &:focus, &:hover {
+    border-color: #4F4F4F;
+  }
+}
+
+.statistic-wrapper {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin-top: 66px;
+}
+.statistic-info{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+  .numbers{
+    font-size: 60px;
+    line-height: 72px;
+    font-weight: 400;
+    color: #000000;
+  }
+  .text{
+    font-size: 22px;
+    line-height: 29px;
+    font-weight: 400;
+    color:#BDBDBD;
+  }
+}

@@ -1,0 +1,33 @@
+.section-main-home{
+  padding: 145px 0 335px;
+}
+.main-home{
+  display:flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+
+  &__buttons{
+    max-width: 600px;
+
+    .button-site{
+      width:244px;
+      height: 61px;
+      &_outline{
+        margin-left: 20px;
+      }
+    }
+  }
+  .title{
+    color: #000000;
+    max-width: 830px;
+    margin: 0 0 11px;
+  }
+  .article{
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 750px;
+    margin: 0 0 60px;
+  }
+}
