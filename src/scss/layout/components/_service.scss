@@ -1,0 +1,42 @@
+.section-service{
+}
+.service {
+  .section-title {
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #E0E0E0;
+  }
+.service-text{
+  margin-bottom: 45px;
+}
+  .article{
+    max-width: 575px;
+    font-size: 20px;
+    line-height: 26px;
+    margin: 20px 0;
+  }
+}
+.service-list{
+  padding: 0;
+  margin: 0;
+
+ li{
+   position: relative;
+   padding-left: 18px;
+
+   &:not(:last-child) {
+     margin-bottom: 10px;
+   }
+
+   &:before{
+     content: '';
+     position: absolute;
+     top: 6px;
+     left: 0;
+     width: 8px;
+     height: 8px;
+     background: #E31D1C;
+     border-radius: 8px;
+   }
+ }
+}

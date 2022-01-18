@@ -4,11 +4,13 @@
 
 .about-us {
   width: 100%;
+  .section-title {
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #E0E0E0;
 
-  hr {
-    width: 100%;
-    background: #E0E0E0;
-  }
+}
+
 }
 
 .section-input {
@@ -26,12 +28,6 @@
     justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
-
-    .title {
-      font-size: 48px;
-      line-height: 58px;
-      margin: 0;
-    }
 
     .article {
       font-size: 20px;
@@ -108,10 +104,22 @@
 
 .statistic-info {
   display: flex;
+  position: relative;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-content: flex-start;
   align-items: flex-start;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: calc(100% + 17px);
+    width: 21px;
+    height: 21px;
+    background: #ffffff;
+    border: 1px solid black;
+    border-radius: 100%;
+  }
 
   .numbers {
     font-size: 60px;
@@ -121,27 +129,32 @@
   }
 
   .text {
-    width:126px;
+    width: 126px;
     font-size: 22px;
     line-height: 29px;
     font-weight: 400;
     color: #BDBDBD;
+    margin: 0;
   }
 }
 
-.statistic-line{
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
-  height: 21px;
-  .block-line{
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-      hr{
-        margin: auto;
-        width: 100%;
-      }
-  }
+.statistic-line-block {
+  padding-bottom: 27px;
+  margin-bottom: 71px;
+  border-bottom: 1px solid #4F4F4F;
+}
 
+.personal-offer{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  .text{
+  margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #BDBDBD;
+    font-weight: 400;
+}
 }
