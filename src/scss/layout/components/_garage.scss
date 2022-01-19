@@ -1,0 +1,128 @@
+.section-garage {
+  margin-bottom: 130px;
+}
+
+.swiper-container {
+  margin-bottom: 35px;
+}
+
+.garage {
+  .swiper-wrapper {
+    height: 550px;
+  }
+
+  .slider-text {
+    margin-top: 50px;
+
+    .name {
+      font-size: 18px;
+      line-height: 22px;
+      color: #828282;
+      font-weight: 400;
+      padding-bottom: 15px;
+      margin: 0;
+    }
+
+    .article {
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: 500;
+      margin-left: 6px;
+    }
+  }
+
+  &-buttons {
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: flex-start;
+    width: 122px;
+
+    .swiper-button {
+      &-prev, &-next {
+        position: relative;
+        background-image: none;
+        width: 56px;
+        height: 56px;
+        border: 1px solid #000000;
+        border-radius: 56px;
+        margin: -10px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 0;
+          height: 0;
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent;
+          transform: translate(-50%, -50%);
+        }
+
+        &:hover {
+          background: #EFEFEF;
+        }
+
+        &:active {
+          background: #000000;
+        }
+      }
+
+
+      &-prev {
+
+        &::before {
+          border-bottom: 10px solid #000000;
+
+        }
+
+        &:active::before {
+          border-bottom: 10px solid #EFEFEF;
+        }
+      }
+
+      &-next {
+        &::before {
+          top: 55%;
+          border-top: 10px solid #000000;
+        }
+
+        &:active::before {
+          border-top: 10px solid #EFEFEF;
+        }
+      }
+    }
+  }
+  hr{
+ color: #000000;
+  }
+}
+
+.garage-text {
+  margin-bottom: 62px;
+  .subtitle {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 10px;
+  }
+
+  .article {
+    font-size: 14px;
+    line-height: 18px;
+    color: #828282;
+    margin: 0;
+  }
+}
+.button-submit_lg{
+  padding: 17px 0;
+  font-size: 18px;
+  line-height: 27px;
+  height: 61px;
+  width: 100%;
+  border-radius: 3px;
+}

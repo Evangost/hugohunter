@@ -7,7 +7,6 @@ import 'bootstrap';
 import 'popper.js';
 import Swiper from 'swiper/dist/js/swiper.min';
 
-
 $(window).on('load', function () {
     let b = $('body');
 
@@ -28,24 +27,18 @@ $(function () {
 
         if (slide > 1) {
             slider = new Swiper('.swiper-container', {
-                observer: true,
-                observeParents: true,
-                loop: true,
-                autoplay: true,
-                spaceBetween: 25,
-                slidesPerView: 1,
+                direction: "vertical",
+                loop:true,
+                // observer: true,
+                // observeParents: true,
+                // direction: 'vertical',
+                // height: 550,
+                // spaceBetween: 0,
+                // slidesPerView: 1,
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev'
                 },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true
-                },
-                /*scrollbar: {
-                    el: '.swiper-scrollbar',
-                },*/
-                dynamicBullets: true,
             });
         }
     }
@@ -86,7 +79,7 @@ $(function () {
                 input.remove();
 
                 noUiSlider.create(elem, {
-                    start: [minValue, maxValue/2],
+                    start: [minValue, maxValue / 2],
                     step: 1,
                     behavior: 'tap-drag',
                     connect: true,

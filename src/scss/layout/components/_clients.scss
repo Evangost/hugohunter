@@ -1,0 +1,25 @@
+.section-clients {
+  margin-bottom: 130px;
+  .subtitle{
+    margin-bottom: 30px;
+  }
+}
+
+.clients {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  &__image{
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width:413px;
+    height: 225px;
+    border: 1px solid #E0E0E0;
+  }
+}
