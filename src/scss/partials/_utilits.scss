@@ -113,11 +113,13 @@
     &:hover {
       background: black;
       color: white;
+      font-weight: 600;
     }
 
     &:active {
       background: #2d2d2d;
       color: white;
+      font-weight: 700;
     }
 
     &_fill {
@@ -165,14 +167,17 @@
     color: white;
     font-size: 18px;
     line-height: 27px;
+    font-weight: 500;
     transition: $transition-base;
 
     &:hover {
       background: #d01817;
+      font-weight: 600;
     }
 
     &:active {
       background: #c51716;
+      font-weight: 700;
     }
 
     &_sm {

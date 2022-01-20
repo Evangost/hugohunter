@@ -57,6 +57,15 @@ header.header {
     a {
       font-size: 14px;
       line-height: 21px;
+      text-decoration: none;
+      color: #000000;
+      font-weight: 400;
+      &:hover{
+        font-weight: 500;
+      }
+      &:active{
+        font-weight: 700;
+      }
     }
   }
 }
@@ -73,10 +82,19 @@ header.header {
 .phone{
   width: 139px;
   height: 27px;
+
   a{
     font-size: 18px;
     line-height: 27px;
     font-weight: 600;
+    text-decoration: none;
+    color: #000000;
+    &:hover{
+      font-weight: 700;
+    }
+    &:active{
+      font-weight: 700;
+    }
   }
 }
 

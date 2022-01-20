@@ -28,13 +28,13 @@ $(function () {
         if (slide > 1) {
             slider = new Swiper('.swiper-container', {
                 direction: "vertical",
-                loop:true,
-                // observer: true,
-                // observeParents: true,
-                // direction: 'vertical',
+                // effect: 'fade',
+                loop: true,
+                observer: true,
+                observeParents: true,
                 // height: 550,
-                // spaceBetween: 0,
-                // slidesPerView: 1,
+                spaceBetween: 0,
+                slidesPerView: 1,
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev'

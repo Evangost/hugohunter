@@ -23,11 +23,11 @@
 
                 <div class="header-container__menu">
                     <ul class="main-menu">
-                        <li><a href="#">About us</a></li>
+                        <li><a href="#a-u">About us</a></li>
                         <li><a href="#">Services</a></li>
                         <li><a href="#">Customers</a></li>
-                        <li><a href="#">Blog/News</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="blog.html">Blog/News</a></li>
+                        <li><a href="#c-b">Contact</a></li>
                     </ul>
                     <div class="header-action">
                         <div class="phone"><a href="tel:+19192457265">(919) 245-7265 </a></div>
@@ -68,7 +68,7 @@
 
         <section class="section section-about-us">
             <div class="container">
-                <div class="about-us">
+                <div id="a-u" class="about-us">
                     <p class="section-title">about us</p>
 
                     <div class="section-input">
@@ -184,15 +184,18 @@
                         <div class="advantage-block__item">
                             <div class="advantage-block__item-title">
                                 <p>Tailored Solutions
-                                    <svg class="info-icon">
-                                        <use xlink:href="img/spritemap.svg#sprite-icon-info"></use>
-                                    </svg>
+                                    <span class="title-info">
+                                        <svg><use xlink:href="img/spritemap.svg#sprite-icon-info"></use></svg>
+                                        <span class="title-info__text">First we make sure the cargo is fitted securely on the vehicle. Then, we oversee the loading and transportation of items, as
+                                    well as the compliance with all federal regulations, until the time they are delivered to the consignee.</span>
+                                    </span>
                                 </p>
 
                                 <svg class="shield-icon">
                                     <use xlink:href="img/spritemap.svg#sprite-icon-shield"></use>
                                 </svg>
                             </div>
+
                             <p>From the moment our team receives your freight, it goes through several important steps
                                 to ensure maximum safety.</p>
                         </div>
@@ -343,19 +346,49 @@
             </div>
         </section>
 
-        <section class="section section-contact">
+        <section id="c-b" class="section section-contact">
             <div class="contact-block">
                 <div class="contact-block__info">
                     <p class="subtitle">Contact us</p>
-                    <p class="contact-block__info-text1">We're here to help</p>
-                    <p class="contact-block__info-text2">24/7 Office</p>
-                    <p class="contact-block__info-text2">(919) 377-9392</p>
-                    <p class="contact-block__info-text2">dispatch@hugohunter.com</p>
-
+                    <div class="contact-block__info_data">
+                        <p class="text">We're here to help</p>
+                        <p class="numbers">24/7 Office</p>
+                        <p class="numbers">(919) 377-9392</p>
+                        <p class="numbers">dispatch@hugohunter.com</p>
+                    </div>
+                    <div class="contact-block__info_data">
+                        <p class="text">We are always on the lookout for new talents, and if you are ready to become part of Hugo Hunter please send your CV to:</p>
+                        <p class="numbers">hrexpedite@hugohunter.com</p>
+                        <p class="numbers">(919) 245-7265</p>
+                    </div>
+                    <div class="contact-block__info_data">
+                        <p class="text">We're here to help</p>
+                        <div class="social-media">
+                            <a href="#" class="link">
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-insta"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="link">
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-facebook"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="link">
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-linkedin"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-block__info-buttons">
+                        <button class="button-site button-site_fill">Request a quote</button>
+                        <button class="button-site button-site_outline">Become a driver</button>
+                    </div>
                 </div>
                 <iframe class="contact-block__map"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3234.745960446108!2d-78.61168828444619!3d35.83070812936635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89ac591f27cdf68b%3A0xed13b596ae29b724!2sHugo%20Hunter!5e0!3m2!1sru!2sua!4v1642606124418!5m2!1sru!2sua"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </section>
 
@@ -465,7 +498,39 @@
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
+            <div class="footer-block">
+                <a href="index.html" class="logo">
+                    <picture>
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/logo.svg') %>"
+                             alt="alt-image" title="title-image">
+                    </picture>
+                </a>
 
+                <div class="footer-block__list">
+                    <ul class="main-menu">
+                        <li><a href="#a-u">About us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Customers</a></li>
+                    </ul>
+                    <ul class="main-menu">
+                        <li><a href="#">Blog/News</a></li>
+                        <li><a href="#c-b">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                    <ul class="main-menu">
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <button class="button-site button-site_fill">Request a call</button>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="reserved">
+                <p>© Hugo Hunter 2019 All rights reserved</p>
+            </div>
         </div>
     </footer>
     <!-- FOOTER END -->
