@@ -1,0 +1,25 @@
+.section-privacy-policy{
+  margin-top: 125px;
+}
+.privacy-policy{
+  width: 100%;
+  .title{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #BDBDBD;
+  }
+}
+  .links-block{
+    border-right: 1px solid #BDBDBD;
+    a {
+      display: block;
+      font-size: 14px;
+      line-height: 17px;
+      font-weight: 400;
+      color: #BDBDBD;
+      margin-top: 20px;
+      text-decoration: none;
+    }
+    .active{
+      color:#E31D1C;
+    }
+  }
