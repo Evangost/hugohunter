@@ -4,10 +4,15 @@
 }
 
   .back{
-    color: #E31D1C;
-    font-size: 18px;
-    line-height: 22px;
-    font-weight: 500;
+    color: #E31D1C;;
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: 500;
+      &:hover {
+        color: #E31D1C;
+        font-weight: 600;
+        text-decoration: none;
+      }
     svg{
       width: 18px;
       height: 12px;
