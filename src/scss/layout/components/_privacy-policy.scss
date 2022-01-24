@@ -32,8 +32,7 @@
 
 
 .text-block {
-  margin: 30px 0 0 60px;
-  padding: 0;
+  padding: 30px 0 0 60px;
 
 
   &__title {
@@ -42,6 +41,13 @@
     color: #000000;
     font-weight: 500;
     margin-bottom: 20px;
+  }
+  &__social-media{
+    margin-bottom: 15px;
+    .active{
+      display: block;
+      margin-bottom: 10px;
+    }
   }
 
   .article {

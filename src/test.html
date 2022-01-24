@@ -6,7 +6,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
     <title>Article page</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="style.39b849729af34ead544f.min.css" rel="stylesheet"></head>
+</head>
 <body class="loaded">
 <!-- BODY -->
 <div class="main-wrapper">
@@ -16,7 +16,7 @@
             <div class="header-container">
                 <a href="index.html" class="logo">
                     <picture>
-                        <img src="img/default.svg" data-src="img/logo.svg"
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/logo.svg') %>"
                              alt="alt-image" title="title-image">
                     </picture>
                 </a>
@@ -25,7 +25,7 @@
                     <ul class="main-menu">
                         <li><a href="#a-u">About us</a></li>
                         <li><a href="#">Services</a></li>
-                        <li><a href="#">Customers</a></li>
+                        <li><a href="#" >Customers</a></li>
                         <li><a href="blog.html">Blog/News</a></li>
                         <li><a href="#c-b">Contact</a></li>
                     </ul>
@@ -43,6 +43,79 @@
     <!-- HEADER END -->
 
     <!-- CONTENT -->
+    <div class="request-form">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                    <button type="button" class="close cross" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                             <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-close"></use>
+                                </svg>
+                        </span>
+                    </button>
+                    <div class="row title">
+                    <h5 class="modal-title col-md-12 text-center" id="exampleModalLabel">Request a quote</h5>
+                    <p class="col-md-12 text-center">Please, fill the form</p>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row align-items-center">
+                            <div class="col-md-6 input-form">
+                                <input type="text" class="form-control" placeholder="First/Last name">
+                            </div>
+                            <div class="col-md-6 input-form">
+                                <input type="email" class="form-control" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-6 input-form">
+                                <input type="text" class="form-control" placeholder="First/Last name">
+                            </div>
+                            <div class="col-md-6 input-form">
+                                <input type="text" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" placeholder="Choose your subject">
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button class="button-submit">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+   <!-- <div class="form-wrapper">
+        <p>Specialized<span>Please, fill the form</span></p>
+        <form>
+            <div class="form-row">
+                <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="First/Last name">
+                </div>
+                <div class="col-md-6">
+                    <input type="email" class="form-control" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="First/Last name">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="Email">
+                </div>
+            </div>
+        </form>
+        <button class="button-submit">Submit</button>
+    </div>-->
+
     <main class="content">
         <section class="section section-article">
             <div class="container">
@@ -66,7 +139,7 @@
                         article, we will look at the problem of ineffective routing and find out why this
                         process must be improved.</p>
                     <picture>
-                        <img src="img/default.svg" data-src="img/article-pic02.png" alt="example" title="example">
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/article-pic02.png') %>" alt="example" title="example">
                     </picture>
                     <div class="subtitle">What is the main disadvantage of manual route planning?</div>
                     <p class="article">
@@ -91,7 +164,7 @@
                         additional vehicles to fulfill orders on time, which entails additional costs.
                     </div>
                     <picture>
-                        <img src="img/default.svg" data-src="img/article-pic03.png" alt="example" title="example">
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/article-pic03.png') %>" alt="example" title="example">
                     </picture>
                     <div class="subtitle">Automated drafting of delivery routes</div>
                     <p class="article">Transportation Management Systems coordinate every component of cargo
@@ -193,7 +266,7 @@
             <div class="footer-block">
                 <a href="index.html" class="logo">
                     <picture>
-                        <img src="img/default.svg" data-src="img/logo.svg"
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/logo.svg') %>"
                              alt="alt-image" title="title-image">
                     </picture>
                 </a>
@@ -229,8 +302,8 @@
 </div>
 
 <div class="icon-load">
-    <picture><img src="img/loader.svg" alt="pre-loader"></picture>
+    <picture><img src="<%= require('./img/loader.svg') %>" alt="pre-loader"></picture>
 </div>
 <!-- BODY END   -->
-<script type="text/javascript" src="bundle.39b849729af34ead544f.min.js"></script></body>
+</body>
 </html>

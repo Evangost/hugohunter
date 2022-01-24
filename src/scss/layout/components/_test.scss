@@ -1,0 +1,70 @@
+.request-form, .become-driver-form, .order-now {
+  .modal-dialog {
+    max-width: 700px;
+    max-height: 520px;
+  }
+
+  .modal-header {
+    position: relative;
+    height: 100%;
+    border: none;
+
+    .cross {
+      position: absolute;
+      display: block;
+      top: 25px;
+      left: 92%;
+      width: 25px;
+      height: 25px;
+      border: none;
+      padding: 0;
+      margin: 5px;
+      background: none;
+
+      svg {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+
+  .title {
+    margin-top: 44px;
+
+    h5 {
+      font-size: 28px;
+      line-height: 42px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      color: #828282;
+    }
+  }
+
+  .modal-footer {
+    border: none;
+  }
+
+  form {
+    padding: 0 57px;
+  }
+
+  .form-control {
+    margin: 0;
+    background: none;
+  }
+
+  .input-form {
+    margin-bottom: 64px;
+  }
+
+  .button-submit {
+    margin: 13px auto 60px;
+    width: 585px;
+    height: 68px;
+  }
+}
