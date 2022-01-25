@@ -6,6 +6,8 @@ import 'jquery-ui/ui/effect'
 import 'bootstrap';
 import 'popper.js';
 import Swiper from 'swiper/dist/js/swiper.min';
+import 'select2';
+import intlTelInput from 'intl-tel-input';
 
 $(window).on('load', function () {
     let b = $('body');
@@ -92,6 +94,37 @@ $(function () {
         }
     }
 
+    // Telephone input
+    if ($('.input-phone').length) {
+        const inputPhone = document.querySelectorAll('.input-phone');
+
+        inputPhone.forEach(function(e, i) {
+            intlTelInput(e, {
+                initialCountry: "auto",
+                geoIpLookup: function(callback) {
+                    $.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+                        var countryCode = (resp && resp.country) ? resp.country : "us";
+                        callback(countryCode);
+                    });
+                },
+                utilsScript: "../../node_modules/intl-tel-input/build/js/utils.js",
+            });
+        });
+
+
+    }
+
+    // Select2
+    if ($('.select-js').length) {
+        const select = document.querySelectorAll('.select-js');
+
+        select.forEach(function (e, i) {
+            $(e).select2({
+                minimumResultsForSearch: Infinity,
+            });
+        });
+    }
+
     // Lazy load observer
     const imagesAll = document.querySelectorAll('img[data-src]');
     let imgObserve = new IntersectionObserver(function (entries) {
@@ -111,4 +144,3 @@ $(function () {
         });
     }
 });
-

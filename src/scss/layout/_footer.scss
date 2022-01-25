@@ -9,21 +9,24 @@ footer.footer {
 
 .copyright {}
 
-.footer-block{
+.footer-block {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   align-content: center;
   height: 175px;
-  .logo{
+
+  .logo {
     width: 47%;
-    img{
+
+    img {
       width: 276px;
       height: 36px;
     }
   }
-  &__list{
-    display:flex;
+
+  &__list {
+    display: flex;
     width: 33%;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -31,32 +34,36 @@ footer.footer {
     align-content: flex-start;
 
 
-    .main-menu{
+    .main-menu {
       display: flex;
       height: 95px;
       flex-flow: column nowrap;
       justify-content: space-between;
       align-content: flex-start;
       align-items: flex-start;
-      border-right:  1px solid #E0E0E0;
-      li{
+      border-right: 1px solid #E0E0E0;
+
+      li {
         a {
           font-size: 14px;
           line-height: 21px;
           text-decoration: none;
           color: #000000;
           font-weight: 400;
-          &:hover{
+
+          &:hover {
             font-weight: 500;
           }
-          &:active{
+
+          &:active {
             font-weight: 700;
           }
         }
       }
     }
   }
-  .button-site_fill{
+
+  .button-site_fill {
     width: 135px;
     font-size: 14px;
     line-height: 21px;
@@ -66,30 +73,35 @@ footer.footer {
     color: #000000;
     border-color: #000000;
     margin-left: 90px;
-    &:hover{
+
+    &:hover {
       font-weight: 500;
     }
-    &:active{
+
+    &:active {
       font-weight: 700;
     }
   }
 
 }
-hr{
+
+hr {
   background-color: #E0E0E0;
   margin: 0;
 }
-.reserved{
+
+.reserved {
   display: flex;
   height: 60px;
   justify-content: flex-start;
   align-items: center;
   align-content: center;
-  p{
-   font-size: 14px;
-   line-height: 21px;
-   font-weight: 400;
-   color: #828282;
-   margin: 0;
+
+  p {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #828282;
+    margin: 0;
   }
 }

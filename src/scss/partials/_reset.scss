@@ -117,9 +117,16 @@ button, input, textarea {
 input {
   transition: $transition-base;
 
-  &[type="text"], &[type="email"], &[type="password"], &[type="number"], &[type="tel"], &[type="search"], &[type="datetime"], &[type="url"] {
+  &[type="text"],
+  &[type="email"],
+  &[type="password"],
+  &[type="number"],
+  &[type="tel"],
+  &[type="search"],
+  &[type="datetime"],
+  &[type="url"] {
     cursor: auto;
-    padding: 0 5px;
+    //padding: 0 5px;
     -webkit-appearance: textfield;
     -moz-appearance: textfield;
 
@@ -305,18 +312,18 @@ iframe {
 
 ::selection {
   text-shadow: none;
-  color: $text-color;
+  color: white;
   background: $main-first-color;
 }
 
 ::-moz-selection {
   text-shadow: none;
-  color: $text-color;
+  color: white;
   background: $main-first-color;
 }
 
 ::-ms-selection {
   text-shadow: none;
-  color: $text-color;
+  color: white;
   background: $main-first-color;
 }

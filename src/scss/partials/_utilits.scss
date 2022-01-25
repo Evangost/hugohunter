@@ -98,13 +98,30 @@
 
 }
 
+.subtitle {
+  font-size: 48px;
+  line-height: 58px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0;
+}
+
+.section-title {
+  font-size: 18px;
+  color: #333333;
+  line-height: 27px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
 .button {
   &-site {
-    padding: 16px 48px;
+    padding: 16px 16px;
     background: none;
     border: 1px solid transparent;
     border-radius: 3px;
     outline: none !important;
+    overflow: visible;
     font-size: 18px;
     font-weight: 500;
     line-height: 27px;
@@ -157,6 +174,11 @@
         }
       }
     }
+
+    &_sm {
+      height: 40px;
+      padding: 9px 10px 10px;
+    }
   }
 
   &-submit {
@@ -201,28 +223,143 @@
     text-decoration: none !important;
     transition: $transition-base;
 
-    &:hover {}
+    &:hover {
+    }
 
-    &:active {}
+    &:active {
+    }
   }
 }
-.subtitle{
-  font-size: 48px;
-  line-height: 58px;
-  font-weight: 600;
-  color: #000000;
-  margin:0;
-}
-.article{
+
+.article {
+  color: black;
   font-size: 16px;
+  font-weight: 400;
   line-height: 24px;
-  color: #000000;
-  font-weight: 400;
 }
-.section-title{
-  font-size: 18px;
-  color: #333333;
-  line-height: 27px;
-  font-weight: 400;
-  text-transform: uppercase;
+
+.form-control {
+  padding: 4px 0;
+  margin: 0;
+  background: none !important;
+  font-size: 1rem;
+  line-height: 24px;
+}
+
+.modal {
+  &-dialog {
+
+  }
+
+  &-content {
+    padding: 60px;
+    border-radius: 0;
+
+    form {
+      label {
+        display: block;
+        margin: 0;
+      }
+
+      .form-control {
+        margin: 0 0 40px;
+      }
+
+
+      .button-submit {
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+
+    .button-submit {
+      border-radius: 4px;
+
+      &_lg {
+        max-width: 215px;
+        height: auto;
+        padding: 19px 20px;
+      }
+    }
+  }
+
+  &-header {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0 0 40px;
+    border: none;
+
+    .close {
+      position: absolute;
+      display: block;
+      top: 20px;
+      right: 20px;
+      width: 25px;
+      height: 25px;
+      border: none;
+      padding: 0;
+      margin: 5px;
+      background: none;
+      outline: none !important;
+
+      svg {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+
+  &-title {
+    margin: 0 0 4px;
+    color: $text-color;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+    text-align: center;
+  }
+
+  &-subtitle {
+    margin: 0;
+    color: #828282;
+    font-size: 1rem;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  &-body {
+    padding: 0;
+  }
+
+  &-footer {
+    padding: 0;
+    border: none;
+
+    & > * {
+      margin: auto;
+    }
+  }
+
+  &-lg {
+    max-width: 700px;
+  }
+
+  //  custom modal
+  &-success {
+    .modal-header {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.iti {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.select2 {
+
 }

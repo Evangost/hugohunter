@@ -36,17 +36,18 @@
         font-size: 18px;
         line-height: 22px;
         font-weight: 500;
+
         &:hover {
           font-weight: 600;
           text-decoration: none;
         }
-        svg{
+
+        svg {
           width: 18px;
           height: 12px;
-          color:#E31D1C;
+          color: #E31D1C;
         }
       }
-
 
       .data {
         color: #828282;
@@ -65,8 +66,9 @@
       }
     }
   }
-  .button-submit_lg{
+
+  .button-submit_lg {
     width: 193px;
-    margin: 30px auto 0px;
+    margin: 30px auto 0;
   }
 }

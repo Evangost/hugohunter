@@ -25,16 +25,14 @@
                     <ul class="main-menu">
                         <li><a href="#a-u">About us</a></li>
                         <li><a href="#">Services</a></li>
-                        <li><a href="#">Customers</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#customersForm">Customers</a></li>
                         <li><a href="blog.html">Blog/News</a></li>
                         <li><a href="#c-b">Contact</a></li>
                     </ul>
                     <div class="header-action">
                         <div class="phone"><a href="tel:+19192457265">(919) 245-7265 </a></div>
-                        <button class="button-site button-site_outline">Request a call</button>
-                        <button class="button-site button-site_fill">Track</button>
-
-
+                        <button class="button-site button-site_sm button-site_outline">Request a call</button>
+                        <button class="button-site button-site_sm button-site_fill" data-toggle="modal" data-target="#trackForm">Track</button>
                     </div>
                 </div>
             </div>
@@ -44,147 +42,29 @@
 
     <!-- CONTENT -->
     <main class="content">
+        <div class="input-style" hidden>
+            <div class="input-style__request-form">
 
-        <div class="request-form">
-            <div class="modal fade" id="requestForm" tabindex="-1" role="dialog" aria-labelledby="requestFormLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header justify-content-center">
-                            <button type="button" class="close cross" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">
-                             <svg>
-                                    <use xlink:href="./img/spritemap.svg#sprite-close"></use>
-                                </svg>
-                        </span>
-                            </button>
-                            <div class="row title">
-                                <h5 class="modal-title col-md-12 text-center" id="requestFormLabel">Request a quote</h5>
-                                <p class="col-md-12 text-center">Please, fill the form</p>
-                            </div>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="form-row align-items-center">
-                                    <div class="col-md-6 input-form">
-                                        <input type="text" class="form-control" placeholder="First/Last name">
-                                    </div>
-                                    <div class="col-md-6 input-form">
-                                        <input type="email" class="form-control" placeholder="Email">
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="col-md-6 input-form">
-                                        <input type="text" class="form-control" placeholder="First/Last name">
-                                    </div>
-                                    <div class="col-md-6 input-form">
-                                        <input type="text" class="form-control" placeholder="Email">
-                                    </div>
-                                    <div class="col-md-12">
-                                        <input type="text" class="form-control" placeholder="Choose your subject">
-                                    </div>
-
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer justify-content-center">
-                            <button class="button-submit">Submit</button>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
 
-        <div class="become-driver-form">
-            <div class="modal fade" id="becomeDriver" tabindex="-1" role="dialog" aria-labelledby="becomeDriverLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header justify-content-center">
-                            <button type="button" class="close cross" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">
-                             <svg>
-                                    <use xlink:href="./img/spritemap.svg#sprite-close"></use>
-                                </svg>
-                        </span>
-                            </button>
-                            <div class="row title">
-                                <h5 class="modal-title col-md-12 text-center" id="becomeDriverLabel">Become a driver</h5>
-                                <p class="col-md-12 text-center">Just type your contacts</p>
-                            </div>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="form-row align-items-center">
-                                    <div class="col-md-6 input-form">
-                                        <input type="text" class="form-control" placeholder="First/Last name">
-                                    </div>
-                                    <div class="col-md-6 input-form">
-                                        <input type="email" class="form-control" placeholder="Email">
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="col-md-6 input-form">
-                                        <input type="text" class="form-control" placeholder="First/Last name">
-                                    </div>
-                                    <div class="col-md-6 input-form">
-                                        <input type="text" class="form-control" placeholder="Email">
-                                    </div>
-                                    <div class="col-md-12">
-                                        <input type="text" class="form-control" placeholder="You are">
-                                    </div>
+            <div class="input-style__become-driver-form">
 
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer justify-content-center">
-                            <button class="button-submit">Apply now</button>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
 
-        <div class="order-now">
-            <div class="modal fade" id="orderNow" tabindex="-1" role="dialog" aria-labelledby="orderNowLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header justify-content-center">
-                            <button type="button" class="close cross" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">
-                             <svg>
-                                    <use xlink:href="./img/spritemap.svg#sprite-close"></use>
-                                </svg>
-                        </span>
-                            </button>
-                            <div class="row title">
-                                <h5 class="modal-title col-md-12 text-center" id="orderNowLabel">Order now</h5>
-                                <p class="col-md-12 text-center">Please, fill the form</p>
-                            </div>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="form-row align-items-center">
-                                    <div class="col-md-6 input-form">
-                                        <input type="text" class="form-control" placeholder="First/Last name">
-                                    </div>
-                                    <div class="col-md-6 input-form">
-                                        <input type="email" class="form-control" placeholder="Email">
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="col-md-6 input-form">
-                                        <input type="text" class="form-control" placeholder="First/Last name">
-                                    </div>
-                                    <div class="col-md-6 input-form">
-                                        <input type="text" class="form-control" placeholder="Email">
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer justify-content-center">
-                            <button class="button-submit">Submit</button>
-                        </div>
-                    </div>
-                </div>
+            <div class="input-style__order-now">
+
+            </div>
+
+            <div class="input-style__customers-form">
+
+            </div>
+
+            <div class="input-style__track-form">
+
+            </div>
+
+            <div class="input-style__app-accepted">
+
             </div>
         </div>
 
@@ -246,7 +126,7 @@
                                     </div>
                                 </div>
                             </form>
-                            <button class="button-submit">Submit</button>
+                            <button class="button-submit" data-toggle="modal" data-target="#appAccepted">Submit</button>
                         </div>
                     </div>
                 </div>
@@ -526,8 +406,8 @@
                         </div>
                     </div>
                     <div class="contact-block__info-buttons">
-                        <button class="button-site button-site_fill">Request a quote</button>
-                        <button class="button-site button-site_outline">Become a driver</button>
+                        <button class="button-site button-site_fill" data-toggle="modal" data-target="#requestForm">Request a quote</button>
+                        <button class="button-site button-site_outline" data-toggle="modal" data-target="#becomeDriver">Become a driver</button>
                     </div>
                 </div>
                 <iframe class="contact-block__map"
@@ -667,10 +547,12 @@
                         <li><a href="#">LinkedIn</a></li>
                     </ul>
                 </div>
-                <button class="button-site button-site_fill">Request a call</button>
+                <button class="button-site button-site_sm button-site_fill">Request a call</button>
             </div>
         </div>
+
         <hr>
+
         <div class="container">
             <div class="reserved">
                 <p>© Hugo Hunter 2019 All rights reserved</p>
@@ -678,6 +560,256 @@
         </div>
     </footer>
     <!-- FOOTER END -->
+</div>
+
+<div class="modal fade" id="becomeDriver" tabindex="-1" role="dialog" aria-labelledby="becomeDriverLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header justify-content-center">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                             <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-close"></use>
+                                </svg>
+                        </span>
+                </button>
+                <p class="modal-title" id="becomeDriverLabel">Become a driver</p>
+                <p class="modal-subtitle">Just type your contacts</p>
+            </div>
+
+            <form action="" method="" name="">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <label>
+                            <input type="text" class="form-control" placeholder="First/Last name">
+                        </label>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <label>
+                            <input type="email" class="form-control" placeholder="Email">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label>
+                            <input type="text" class="form-control" placeholder="First/Last name">
+                        </label>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <label>
+                            <input type="text" class="form-control" placeholder="Email">
+                        </label>
+                    </div>
+
+                    <div class="col-12">
+                        <label>
+                            <input type="text" class="form-control" placeholder="You are">
+                        </label>
+                    </div>
+                </div>
+
+                <button type="button" class="button-submit" data-dismiss="modal" data-toggle="modal" data-target="#appAccepted">Apply now</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="requestForm" tabindex="-1" role="dialog" aria-labelledby="requestFormLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header justify-content-center">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                             <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-close"></use>
+                                </svg>
+                        </span>
+                </button>
+                <p class="modal-title" id="requestFormLabel">Request a quote</p>
+                <p class="modal-subtitle">Please, fill the form</p>
+            </div>
+
+            <form>
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <label>
+                            <input type="text" class="form-control" placeholder="First/Last name">
+                        </label>
+                    </div>
+                    <div class="col-md-6">
+                        <label>
+                            <input type="email" class="form-control" placeholder="Email">
+                        </label>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label>
+                            <input type="tel" class="form-control input-phone" placeholder="">
+                        </label>
+                    </div>
+                    <div class="col-md-6">
+                        <label>
+                            <select name="" id="" class="select-js">
+                                <option value="01">Variant №1</option>
+                                <option value="02">Variant №2</option>
+                                <option value="03">Variant №3</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="col-md-12">
+                        <label><input type="text" class="form-control" placeholder="Choose your subject"></label>
+                    </div>
+                </div>
+
+                <button type="button" class="button-submit" data-toggle="modal" data-target="#appAccepted">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="orderNow" tabindex="-1" role="dialog" aria-labelledby="orderNowLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header justify-content-center">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                             <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-close"></use>
+                                </svg>
+                        </span>
+                </button>
+                <p class="modal-title" id="orderNowLabel">Order now</p>
+                <p class="modal-subtitle">Please, fill the form</p>
+            </div>
+
+            <form>
+                <div class="row align-items-center">
+                    <div class="col-md-6 input-form">
+                        <label> <input type="text" class="form-control" placeholder="First/Last name"></label>
+                    </div>
+                    <div class="col-md-6 input-form">
+                        <label> <input type="email" class="form-control" placeholder="Email"></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 input-form">
+                        <label><input type="text" class="form-control" placeholder="First/Last name"></label>
+                    </div>
+                    <div class="col-md-6 input-form">
+                        <label><input type="text" class="form-control" placeholder="Email"></label>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button class="button-submit" data-toggle="modal" data-target="#appAccepted">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="customersForm" tabindex="-1" role="dialog" aria-labelledby="customersFormLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header justify-content-center">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                             <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-close"></use>
+                                </svg>
+                        </span>
+                </button>
+                <p class="modal-title" id="customersFormLabel">Search for Truck</p>
+                <p class="modal-subtitle">Fill out the fields below to search our network for available units:</p>
+            </div>
+
+            <form>
+                <div class="row">
+                    <div class="col-md-12 input-form">
+                        <label>
+                            <input type="text" class="form-control" placeholder="City">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 input-form">
+                        <label>
+                            <input type="text" class="form-control" placeholder="State/Province">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 input-form">
+                        <label>
+                            <input type="text" class="form-control" placeholder="State/Province">
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <button class="button-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="trackForm" tabindex="-1" role="dialog" aria-labelledby="trackFormLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header justify-content-center">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                             <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-close"></use>
+                                </svg>
+                        </span>
+                </button>
+                <p class="modal-title" id="trackFormLabel">Track a Shipment</p>
+
+            </div>
+            <div class="modal-body">
+                <form action="" method="" name="">
+                    <div class="row">
+                        <div class="col-md-12 input-form">
+                            <label> <input type="text" class="form-control" placeholder="Enter Your Tracking Number"></label>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="button-submit">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="appAccepted" tabindex="-1" role="dialog" aria-labelledby="appAcceptedLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header justify-content-center">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                             <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-close"></use>
+                                </svg>
+                        </span>
+                </button>
+                <p class="modal-title" id="appAcceptedLabel">Thank you, your application has been accepted </p>
+                <p class="modal-subtitle">We will contact you shortly</p>
+            </div>
+
+            <div class="d-flex flex-row justify-content-center">
+                <button type="button" class="button-submit button-submit_lg" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="icon-load">

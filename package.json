@@ -36,9 +36,11 @@
   "dependencies": {
     "bootstrap": "^4.5.2",
     "intersection-observer": "^0.7.0",
+    "intl-tel-input": "^17.0.15",
     "jquery": "^3.5.1",
     "jquery-ui": "^1.12.1",
     "popper.js": "^1.16.1",
+    "select2": "^4.1.0-rc.0",
     "svg-spritemap-webpack-plugin": "^3.5.9",
     "swiper": "^4.5.1"
   }

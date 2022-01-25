@@ -4,7 +4,7 @@
 header.header {
   order: 1;
   -webkit-order: 1;
-  position:absolute;
+  position: absolute;
   min-width: 320px;
   width: 100%;
   z-index: 100;
@@ -26,8 +26,6 @@ header.header {
   align-content: center;
 
 
-
-
   &__menu {
     display: inline-flex;
     width: 100%;
@@ -38,7 +36,6 @@ header.header {
     padding-left: 85px;
   }
 }
-
 
 .main-menu {
   display: inline-flex;
@@ -60,10 +57,12 @@ header.header {
       text-decoration: none;
       color: #000000;
       font-weight: 400;
-      &:hover{
+
+      &:hover {
         font-weight: 500;
       }
-      &:active{
+
+      &:active {
         font-weight: 700;
       }
     }
@@ -78,38 +77,44 @@ header.header {
   align-content: center;
   align-items: center;
   padding: 0;
+
+  .button-site {
+    &_outline {
+      width: 100%;
+      max-width: 135px;
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    &_fill {
+      width: 100%;
+      max-width: 98px;
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
 }
-.phone{
+
+.phone {
   width: 139px;
   height: 27px;
 
-  a{
+  a {
     font-size: 18px;
     line-height: 27px;
     font-weight: 600;
     text-decoration: none;
     color: #000000;
-    &:hover{
+
+    &:hover {
       font-weight: 700;
     }
-    &:active{
+
+    &:active {
       font-weight: 700;
     }
   }
 }
 
-.button-site_outline{
-  width: 135px;
-  height: 40px;
-  font-size: 14px;
-  line-height: 21px;
-  padding:0;
-}
-.button-site_fill{
-  width: 98px;
-  height: 40px;
-  font-size: 14px;
-  line-height: 21px;
-  padding: 0;
-}
+
 
