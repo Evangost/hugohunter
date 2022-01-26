@@ -320,7 +320,7 @@
     font-size: 28px;
     line-height: 42px;
     text-align: center;
-  }
+}
 
   &-subtitle {
     margin: 0;
@@ -347,10 +347,50 @@
     max-width: 700px;
   }
 
+  .select-js {
+
+  }
+
   //  custom modal
   &-success {
-    .modal-header {
-      margin-bottom: 20px;
+    .modal {
+      &-header{
+        margin: 0;
+      }
+      &-title {
+        margin-bottom: 6px;
+      }
+      &-subtitle{
+        margin-bottom: 20px;
+      }
+      &-content {
+        padding: 100px 16px 130px;
+      }
+
+    }
+  }
+
+  &-message {
+    .button-submit_lg{
+      max-width: 118px ;
+
+    }
+
+    .modal {
+      &-title {
+        color: #E31D1C;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 42px;
+        margin-bottom: 16px;
+      }
+      &-header{
+        margin-bottom: 0;
+      }
+      &-content{
+       padding: 130px 16px 150px;
+        justify-content: center;
+      }
     }
   }
 }
@@ -361,5 +401,60 @@
 }
 
 .select2 {
+  width: 100% !important;
+  margin-bottom: 40px;
+  border: none;
 
+  &-container {
+    &--default {
+      .select2 {
+        &-selection {
+          &--single {
+            background: none;
+          }
+        }
+        &-results {
+          &__option {
+            &--highlighted {
+              &.select2-results__option {
+                &--selectable {
+                  background: none;
+                  color: black;
+                  font-weight: 400;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .select2-selection {
+      &--single {
+        height: auto;
+        border: none;
+        border-bottom: 1px solid #828282;
+        border-radius: 0;
+        color: #828282;
+
+        .select2-selection {
+          &__rendered {
+            padding-left: 0;
+            line-height: 23px;
+          }
+
+          &__arrow {}
+        }
+      }
+    }
+  }
+
+  &-results {
+    &__options {
+      max-height: 100% !important;
+      background: #F8F8F8;
+      color: #828282;
+    }
+  }
 }
+
+

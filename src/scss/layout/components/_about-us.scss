@@ -4,12 +4,13 @@
 
 .about-us {
   width: 100%;
+
   .section-title {
     margin-bottom: 20px;
     padding-bottom: 14px;
     border-bottom: 1px solid #E0E0E0;
 
-}
+  }
 
 }
 
@@ -49,28 +50,28 @@
   align-content: center;
   background: #F8F8F8;
   width: 555px;
-  height: 360px;
   padding: 62px 32px 74px;
 
-  p {
+  &__title {
     font-size: 26px;
     line-height: 39px;
     font-weight: 500;
     color: #333333;
     margin-bottom: 20px;
-  }
 
-  span {
-    font-size: 14px;
-    line-height: 21px;
-    font-weight: 400;
-    color: #828282;
-    margin: 0 0 0 10px;
-
-    .button-submit {
-      width: 485px;
+    span {
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: 400;
+      color: #828282;
+      margin: 0 0 0 10px;
     }
   }
+
+  .button-submit {
+    width: 485px;
+  }
+
 }
 
 .form-control {
@@ -144,17 +145,18 @@
   border-bottom: 1px solid #4F4F4F;
 }
 
-.personal-offer{
+.personal-offer {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   align-content: center;
-  .text{
-  margin-bottom: 10px;
+
+  .text {
+    margin-bottom: 10px;
     font-size: 14px;
     line-height: 16px;
     color: #BDBDBD;
     font-weight: 400;
-}
+  }
 }
