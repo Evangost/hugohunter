@@ -2,6 +2,7 @@
 ********************* CONTENT ********************
 *************************************************/
 .content {
+  width: 100%;
   order: 2;
   -webkit-order: 2;
   flex-grow: 1;
@@ -20,4 +21,3 @@
 @import "components/blog-articles";
 @import "components/article-page";
 @import "components/privacy-policy";
-@import "components/test";

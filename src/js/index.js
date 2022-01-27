@@ -22,6 +22,16 @@ $(window).on('load', function () {
 });
 
 $(function () {
+    // Toggle header menu
+    (function () {
+        let btn = document.querySelector('.header-container__menu-toggle');
+        btn.addEventListener('click', function (){
+            document.body.classList.toggle('modal-open');
+            this.classList.toggle('active');
+            this.nextElementSibling.classList.toggle('active');
+        });
+    })();
+
     // Swiper slider
     if ($('.swiper-container').length) {
         let slider;
