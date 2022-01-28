@@ -25,7 +25,7 @@ $(function () {
     // Toggle header menu
     (function () {
         let btn = document.querySelector('.header-container__menu-toggle');
-        btn.addEventListener('click', function (){
+        btn.addEventListener('click', function () {
             document.body.classList.toggle('modal-open');
             this.classList.toggle('active');
             this.nextElementSibling.classList.toggle('active');
@@ -40,17 +40,22 @@ $(function () {
         if (slide > 1) {
             slider = new Swiper('.swiper-container', {
                 direction: "vertical",
-                // effect: 'fade',
                 loop: true,
                 observer: true,
                 observeParents: true,
-                // height: 550,
+                height: 550,
                 spaceBetween: 0,
                 slidesPerView: 1,
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev'
                 },
+                breakpoints: {
+                    1200: {
+                        direction: 'horizontal',
+                        height: null,
+                    }
+                }
             });
         }
     }
@@ -108,11 +113,12 @@ $(function () {
     if ($('.input-phone').length) {
         const inputPhone = document.querySelectorAll('.input-phone');
 
-        inputPhone.forEach(function(e, i) {
+        inputPhone.forEach(function (e, i) {
             intlTelInput(e, {
                 initialCountry: "auto",
-                geoIpLookup: function(callback) {
-                    $.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+                geoIpLookup: function (callback) {
+                    $.get('https://ipinfo.io', function () {
+                    }, "jsonp").always(function (resp) {
                         var countryCode = (resp && resp.country) ? resp.country : "us";
                         callback(countryCode);
                     });

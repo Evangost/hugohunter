@@ -1,13 +1,16 @@
 .section-main-home {
-  padding: 145px 0 335px;
+  padding: 105px 0 360px;
+  overflow: hidden;
+
 }
 
 .main-home {
   display: flex;
   flex-flow: column wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
 
   &__buttons {
     max-width: 600px;
@@ -15,23 +18,112 @@
     .button-site {
       width: 244px;
       height: 61px;
+      margin-bottom: 15px;
 
       &_outline {
-        margin-left: 20px;
+        background: rgba(255, 138, 0, 0.4);
       }
     }
   }
 
   .title {
+    font-size: 34px;
+    line-height: 41px;
     color: #000000;
     max-width: 830px;
     margin: 0 0 11px;
   }
 
   .article {
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 14px;
+    line-height: 21px;
     max-width: 750px;
-    margin: 0 0 60px;
+    margin: 0 0 30px;
   }
 }
+
+@media screen and (min-width: 375px) {
+  .section-main-home {
+  }
+}
+
+@include media-breakpoint-up(sm) {
+}
+
+/* from 576 to 767 */
+@include media-breakpoint-up(md) {
+  .main-home{
+    .title {
+      max-width: 600px;
+    }
+    .article{
+      max-width: 500px;
+    }
+  }
+}
+
+
+/* from 768 to 991 */
+@include media-breakpoint-up(lg) {
+}
+
+/* from 992 to 1200 */
+
+/* from 1200 to 1300 */
+@include media-breakpoint-up(xl) {
+  .section-main-home {
+    padding: 120px 0 350px;
+  }
+  .main-home {
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    text-align: start;
+
+    .title {
+      font-size: 50px;
+      line-height: 82px;
+      max-width: 800px;
+    }
+
+    .article {
+      font-size: 20px;
+      line-height: 30px;
+      max-width: 720px;
+      margin: 0 0 60px;
+    }
+
+    &__buttons {
+      .button-site {
+        &_outline {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+}
+
+
+@include media-breakpoint-up(xxl) {
+  .section-main-home {
+    padding: 145px 0 335px;
+  }
+  .main-home {
+    font-size: 56px;
+    line-height: 84px;
+
+    .title {
+      font-size: 56px;
+      line-height: 84px;
+      max-width: 830px;
+    }
+
+    .article {
+      max-width: 750px;
+    }
+  }
+}
+
+/* from 1300 to infinity */
+

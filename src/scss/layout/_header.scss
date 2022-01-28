@@ -277,6 +277,9 @@ header.header {
       &-toggle {
         display: none;
       }
+      &-wrap{
+        width: 100%;
+      }
 
 
     }
@@ -284,7 +287,7 @@ header.header {
   .main-menu {
     flex-flow: row wrap;
     justify-content: flex-start;
-    margin-left: 10px;
+    margin-left: 20px;
 
     li {
       margin: 0;
@@ -299,7 +302,7 @@ header.header {
     }
   }
   .header-action {
-    width: 410px;
+    min-width: 410px;
     flex-flow: row nowrap;
     justify-content: space-between;
 
@@ -323,5 +326,14 @@ header.header {
 
 
 @include media-breakpoint-up(xxl) {
-}
+  .main-menu {
+    margin-left: 80px;
+  }
+  .header-action {
+    min-width: 480px;
+  }
 
+.phone{
+  margin: 0 0 0 35px;
+}
+}

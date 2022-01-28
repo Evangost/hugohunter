@@ -61,10 +61,6 @@
                          data-src="<%= require('./img/bg-main-pic.png') %>" class="section-bg__img" alt="alt-image"
                          title="title-image">
                 </picture>
-
-                <picture class="picture-sm">
-                    <img src="<%= require('./img/default.svg') %>" alt="alt-image" title="title-image">
-                </picture>
             </div>
 
             <div class="container">
@@ -110,7 +106,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <label> <input type="tel" class="form-control input-phone" placeholder=""></label>
+                                        <label class="phone-wrap"> <input type="tel" class="form-control input-phone" placeholder=""></label>
                                     </div>
                                     <div class="col-md-6">
                                         <select name="" class="select-js" data-placeholder="Сhoose your type of vehicle">
@@ -120,8 +116,8 @@
                                         </select>
                                     </div>
                                 </div>
+                                <button class="button-submit" data-toggle="modal" data-target="#appAccepted">Submit</button>
                             </form>
-                            <button class="button-submit" data-toggle="modal" data-target="#appAccepted">Submit</button>
                         </div>
                     </div>
                 </div>
