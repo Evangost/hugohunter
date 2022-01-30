@@ -7,49 +7,68 @@ footer.footer {
   position: relative;
 }
 
-.copyright {}
+.copyright {
+}
 
 .footer-block {
   display: flex;
-  justify-content: flex-start;
+  /* flex-flow: row nowrap;*/
+  flex-flow: column wrap;
+  justify-content: center;
+  /* justify-content: flex-start;*/
   align-items: center;
   align-content: center;
-  height: 175px;
+  /*height: 175px;*/
 
   .logo {
-    width: 47%;
+    /*  width: 47%;*/
+    margin-bottom: 30px;
 
     img {
-      width: 276px;
-      height: 36px;
+      width: 222px;
+      height: 29px;
+      /*width: 276px;
+      height: 36px;*/
     }
   }
 
   &__list {
     display: flex;
-    width: 33%;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    align-content: flex-start;
+    /* width: 33%;*/
+    flex-flow: column nowrap;
+    /* flex-flow: row wrap;*/
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    /*justify-content: space-between;*/
+    /* align-items: flex-start;
+     align-content: flex-start;*/
 
 
     .main-menu {
       display: flex;
-      height: 95px;
+      /* height: 95px;*/
       flex-flow: column nowrap;
-      justify-content: space-between;
-      align-content: flex-start;
-      align-items: flex-start;
-      border-right: 1px solid #E0E0E0;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      /*  justify-content: space-between;
+        align-content: flex-start;
+        align-items: flex-start;*/
+      /* border-right: 1px solid #E0E0E0;*/
 
       li {
+        margin-bottom: 15px;
+
         a {
-          font-size: 14px;
-          line-height: 21px;
+          font-size: 16px;
+          line-height: 24px;
+          /* font-size: 14px;
+           line-height: 21px;*/
           text-decoration: none;
           color: #000000;
           font-weight: 400;
+
 
           &:hover {
             font-weight: 500;
@@ -60,11 +79,16 @@ footer.footer {
           }
         }
       }
+
+      .social-media {
+        font-weight: 500;
+      }
     }
   }
 
   .button-site_fill {
-    width: 135px;
+    width: 206px;
+    /* width: 135px;*/
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
@@ -72,7 +96,8 @@ footer.footer {
     background-color: #FFFFFF;
     color: #000000;
     border-color: #000000;
-    margin-left: 90px;
+    /* margin-left: 90px;*/
+    margin-bottom: 40px;
 
     &:hover {
       font-weight: 500;
@@ -104,4 +129,113 @@ hr {
     color: #828282;
     margin: 0;
   }
+}
+
+/* from 576 to 767 */
+@include media-breakpoint-up(sm) {
+
+}
+
+/* from 768 to 991 */
+@include media-breakpoint-up(md) {
+  .footer-block {
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    height: 175px;
+
+    .logo {
+      width: 30%;
+      margin-bottom: 0;
+
+      img {
+        width: 210px;
+        height: 26px;
+      }
+    }
+
+    &__list {
+      width: 337px;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      align-content: flex-start;
+
+      .main-menu {
+        height: 95px;
+        width: 130px;/* for 768*/
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        border-right: 1px solid #E0E0E0;
+
+        li {
+          a {
+            font-size: 14px;
+            line-height: 21px;
+          }
+        }
+
+        .social-media {
+          font-weight: 400;
+        }
+
+      }
+    }
+
+    .button-site_fill {
+
+      width: 122px;
+      margin-left: 10px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* from 992 to 1200 */
+@include media-breakpoint-up(lg) {
+  .footer-block {
+    .logo {
+      width: 47%;
+      img {
+        width: 276px;
+        height: 36px;
+      }
+    }
+    &__list {
+      width: 43%;
+      .main-menu {
+        width: 33%;/* for 768*/
+        padding:0 0 0 13px;
+        align-content: flex-start;
+        align-items: flex-start;
+      }
+    }
+    .button-site_fill {
+      width: 135px;
+      margin-left: 45px;
+    }
+  }
+
+}
+
+
+/* from 1200 to 1300 */
+@include media-breakpoint-up(xl) {
+.footer-block {
+  &__list {
+    .main-menu {
+      padding:0 0 0 30px;
+      margin: 0;
+
+    }
+  }
+  .button-site_fill {
+    margin-left: 90px;
+  }
+}
+}
+
+/*from 1300 to infinity*/
+@include media-breakpoint-up(xxl) {
+
 }

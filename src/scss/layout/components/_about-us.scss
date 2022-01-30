@@ -141,10 +141,11 @@
   }
 
   .numbers {
-    font-size: 60px;
-    line-height: 72px;
+    font-size: 50px;
+    line-height: 60px;
     font-weight: 400;
     color: #000000;
+    margin-bottom: 4px;
   }
 
   .text {
@@ -153,7 +154,7 @@
     line-height: 29px;
     font-weight: 400;
     color: #BDBDBD;
-    margin: 0;
+    margin-bottom: 33px;
   }
 }
 
@@ -224,6 +225,13 @@
     &::after {
       top: calc(100% + 17px);
       right: auto;
+    }
+    .numbers{
+      font-size: 60px;
+      line-height: 72px;
+    }
+    .text{
+      margin: 0;
     }
   }
 

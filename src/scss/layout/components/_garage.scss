@@ -9,7 +9,6 @@
     }
 
 
-
     &-slide {
       img {
         width: 100%;
@@ -21,8 +20,10 @@
     margin-top: 50px;
 
     .name {
-      font-size: 18px;
-      line-height: 22px;
+      font-size: 16px;
+      line-height: 19px;
+      /*font-size: 18px;
+      line-height: 22px;*/
       color: #828282;
       font-weight: 400;
       padding-bottom: 15px;
@@ -30,30 +31,36 @@
     }
 
     .article {
-      font-size: 18px;
-      line-height: 22px;
+      font-size: 16px;
+      line-height: 19px;
+      /*font-size: 18px;
+      line-height: 22px;*/
       font-weight: 500;
       margin-left: 6px;
     }
   }
 
   &-buttons {
-    position: absolute;
+    /*position: absolute;
     right: 0;
-    bottom: 50px;
+    bottom: 50px;*/
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-content: flex-start;
     align-items: flex-start;
-    width: 122px;
+    width: 100%;
+    height: 50px; /* add for 320px*/
+    /* width: 122px;*/
 
     .swiper-button {
       &-prev, &-next {
         position: relative;
         background-image: none;
-        width: 56px;
-        height: 56px;
+        /*  width: 56px;
+          height: 56px;*/
+        width: 35px;
+        height: 35px;
         border: 1px solid #000000;
         border-radius: 56px;
         margin: -10px;
@@ -62,11 +69,14 @@
           content: '';
           position: absolute;
           top: 50%;
-          left: 50%;
+          left: 46%;
+          /* left: 50%;*/
           width: 0;
           height: 0;
-          border-left: 8px solid transparent;
-          border-right: 8px solid transparent;
+          border-top: 8px solid transparent;
+          border-bottom: 8px solid transparent;
+          /* border-left: 8px solid transparent;
+           border-right: 8px solid transparent;*/
           transform: translate(-50%, -50%);
         }
 
@@ -83,35 +93,42 @@
       &-prev {
 
         &::before {
-          border-bottom: 10px solid #000000;
+          /*border-bottom: 10px solid #000000;*/
+          border-right: 10px solid #000000;
 
         }
 
         &:active::before {
-          border-bottom: 10px solid #EFEFEF;
+          /*border-bottom: 10px solid #EFEFEF;*/
+          border-right: 10px solid #EFEFEF;
         }
       }
 
       &-next {
         &::before {
-          top: 55%;
-          border-top: 10px solid #000000;
+          top: 50%;
+          left: 54%;
+          /*border-top: 10px solid #000000;*/
+          border-left: 10px solid #000000;
         }
 
         &:active::before {
-          border-top: 10px solid #EFEFEF;
+          border-left: 10px solid #EFEFEF;
+         /* border-top: 10px solid #EFEFEF;*/
         }
       }
     }
   }
-  hr{
- color: #000000;
+
+  hr {
+    color: #000000;
   }
 }
 
 .garage-text {
-  margin-top: 20px ;
+  margin-top: 20px;
   margin-bottom: 45px;
+
   .subtitle {
     font-size: 22px;
     line-height: 26px;
@@ -122,10 +139,12 @@
     font-size: 14px;
     line-height: 18px;
     color: #828282;
-    margin: 0;
+    margin: 0 0 30px;
+    /*margin:0;*/
   }
 }
-.button-submit_lg{
+
+.button-submit_lg {
   padding: 17px 0;
   font-size: 18px;
   line-height: 27px;
@@ -133,12 +152,85 @@
   width: 100%;
   border-radius: 3px;
 }
-/* from 1200 to 1300 */
+
+
+@include media-breakpoint-up(sm){}
+/* from 576 to 767 */
+@include media-breakpoint-up(md) {
+  .garage {
+    .slider-text {
+      .name {
+        font-size: 18px;
+        line-height: 22px;
+      }
+
+      .article {
+
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+
+    &-buttons {
+      position: absolute;
+      right: 0;
+      bottom: 50px;
+      width: 122px;
+      height: auto;
+
+      .swiper-button {
+        &-prev, &-next {
+          width: 56px;
+          height: 56px;
+
+          &::before {
+            left: 50%;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+          }
+        }
+
+        &-prev {
+
+          &::before {
+            top: 44%;
+            border-bottom: 10px solid #000000;
+          }
+          &:active::before {
+            border-bottom: 10px solid #EFEFEF;
+          }
+        }
+
+        &-next {
+          &::before {
+            top: 63%;
+            border-top: 10px solid #000000;
+          }
+          &:active::before {
+           border-top: 10px solid #EFEFEF;
+          }
+        }
+      }
+    }
+    .garage-text {
+      .article {
+        *margin:0;
+      }
+    }
+  }
+}
+
+/* from 768 to 991 */
+@include media-breakpoint-up(lg){}
+/* from 992 to 1200 */
 @include media-breakpoint-up(xl) {
- .swiper {
-   &-wrapper {
-     height: 550px;
-   }
- }
+  .swiper {
+    &-wrapper {
+      height: 550px;
+    }
+  }
 
 }
+
+/* from 1200 to 1300 */
+@include media-breakpoint-up(xxl){}
