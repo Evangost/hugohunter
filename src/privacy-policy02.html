@@ -21,20 +21,30 @@
                     </picture>
                 </a>
 
-                <div class="header-container__menu">
-                    <ul class="main-menu">
-                        <li><a href="#a-u">About us</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Customers</a></li>
-                        <li><a href="blog.html">Blog/News</a></li>
-                        <li><a href="#c-b">Contact</a></li>
-                    </ul>
-                    <div class="header-action">
-                        <div class="phone"><a href="tel:+19192457265">(919) 245-7265 </a></div>
-                        <button class="button-site button-site_sm button-site_outline">Request a call</button>
-                        <button class="button-site button-site_sm button-site_fill">Track</button>
+                <div class="header-container__menu-wrap">
+                    <button class="header-container__menu-toggle">
+                        <span></span>
+                    </button>
 
-
+                    <div class="header-container__menu">
+                        <a href="index.html" class="header-container__menu-logo">
+                            <picture>
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/logo.svg') %>"
+                                     alt="alt-image" title="title-image">
+                            </picture>
+                        </a>
+                        <ul class="main-menu">
+                            <li><a href="#a-u">About us</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#customersForm">Customers</a></li>
+                            <li><a href="blog.html">Blog/News</a></li>
+                            <li><a href="#c-b">Contact</a></li>
+                        </ul>
+                        <div class="header-action">
+                            <div class="phone"><a href="tel:+19192457265">(919) 245-7265 </a></div>
+                            <button class="button-site button-site_sm button-site_outline">Request a call</button>
+                            <button class="button-site button-site_sm button-site_fill" data-toggle="modal" data-target="#trackForm">Track</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -115,15 +125,17 @@
                         <li><a href="#">Privacy Policy</a></li>
                     </ul>
                     <ul class="main-menu">
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">LinkedIn</a></li>
+                        <li><a class="social-media" href="#">Instagram</a></li>
+                        <li><a class="social-media" href="#">Facebook</a></li>
+                        <li><a class="social-media" href="#">LinkedIn</a></li>
                     </ul>
                 </div>
-                <button class="button-site button-site_fill">Request a call</button>
+                <button class="button-site button-site_sm button-site_fill">Request a call</button>
             </div>
         </div>
+
         <hr>
+
         <div class="container">
             <div class="reserved">
                 <p>© Hugo Hunter 2019 All rights reserved</p>

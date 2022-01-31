@@ -116,6 +116,14 @@ header.header {
           visibility: hidden;
         }
       }
+
+      &.blog-toggle {
+        &.active{
+          &::before, &::after, span{
+            background: black;
+          }
+        }
+      }
     }
 
     &.active {

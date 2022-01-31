@@ -252,7 +252,8 @@
   }
 
   &-content {
-    padding: 60px;
+   /* padding: 60px;*/
+    padding: 40px;
     border-radius: 0;
 
     form {
@@ -267,6 +268,7 @@
 
 
       .button-submit {
+        padding: 15px;
         width: 100%;
         margin-top: 10px;
       }
@@ -459,3 +461,26 @@
 }
 
 
+
+
+/* from 576 to 767 */
+@include media-breakpoint-up(sm) {
+  .modal {
+    &-content {
+      padding: 60px;
+      form {
+        .button-submit {
+          padding: 15px 95px;
+        }
+      }
+    }
+  }
+}
+/* from 768 to 991 */
+@include media-breakpoint-up(md) {}
+/* from 992 to 1200 */
+@include media-breakpoint-up(lg) {}
+/* from 1200 to 1300 */
+@include media-breakpoint-up(xl) {}
+/* from 1300 to infinity */
+@include media-breakpoint-up(xxl) {}

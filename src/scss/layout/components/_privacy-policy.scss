@@ -1,5 +1,6 @@
 .section-privacy-policy {
-  margin-top: 125px;
+  /*margin-top: 125px;*/
+  margin-top: 102px;
   margin-bottom: 100px;
 }
 
@@ -9,7 +10,11 @@
   .active {
     color: #E31D1C;
   }
+
   .title {
+    font-size: 32px;
+    line-height: 48px;
+    text-align: center; /*for 320px*/
     padding-bottom: 20px;
     border-bottom: 1px solid #BDBDBD;
     margin: 0;
@@ -17,8 +22,11 @@
 }
 
 .links-block {
-  border-right: 1px solid #BDBDBD;
+  border-bottom: 1px solid #BDBDBD;
+  /*border-right: 1px solid #BDBDBD;*/
+  padding-bottom: 20px; /* for 320px*/
   a {
+    text-align: center;
     display: block;
     font-size: 14px;
     line-height: 17px;
@@ -32,19 +40,24 @@
 
 
 .text-block {
-  padding: 30px 0 0 60px;
+  /* padding: 30px 0 0 60px;*/
+  padding-top: 30px;
 
 
   &__title {
-    font-size: 24px;
-    line-height: 29px;
+    font-size: 22px;
+    line-height: 26px;
+    /*font-size: 24px;
+    line-height: 29px;*/
     color: #000000;
     font-weight: 500;
     margin-bottom: 20px;
   }
-  &__social-media{
+
+  &__social-media {
     margin-bottom: 15px;
-    .active{
+
+    .active {
       display: block;
       margin-bottom: 10px;
     }
@@ -61,9 +74,11 @@
     }
   }
 }
+
 .list {
   padding: 0;
-  li{
+
+  li {
     position: relative;
     padding-left: 18px;
 
@@ -71,7 +86,7 @@
       margin-bottom: 10px;
     }
 
-    &:before{
+    &:before {
       content: '';
       position: absolute;
       top: 6px;
@@ -82,4 +97,52 @@
       border-radius: 8px;
     }
   }
+}
+
+@include media-breakpoint-up(sm) {
+
+}
+
+/* from 768 to 991 */
+@include media-breakpoint-up(md) {
+
+}
+
+/* from 992 to 1200 */
+@include media-breakpoint-up(lg) {
+  .section-privacy-policy {
+    margin-top: 125px;
+  }
+  .privacy-policy {
+
+
+    .title {
+      font-size: 56px;
+      line-height: 67px;
+      text-align: start;
+    }
+  }
+  .text-block {
+    padding: 30px 0 0 60px;
+
+    &__title {
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+  }
+  .links-block {
+    border-right: 1px solid #BDBDBD;
+    border-bottom: none;
+  }
+}
+
+/* from 1200 to 1300 */
+@include media-breakpoint-up(xl) {
+
+}
+
+/*from 1300 to infinity*/
+@include media-breakpoint-up(xxl) {
+
 }

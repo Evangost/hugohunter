@@ -41,9 +41,6 @@
   }
 
   &-buttons {
-    /*position: absolute;
-    right: 0;
-    bottom: 50px;*/
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -51,14 +48,11 @@
     align-items: flex-start;
     width: 100%;
     height: 50px; /* add for 320px*/
-    /* width: 122px;*/
 
     .swiper-button {
       &-prev, &-next {
         position: relative;
         background-image: none;
-        /*  width: 56px;
-          height: 56px;*/
         width: 35px;
         height: 35px;
         border: 1px solid #000000;
@@ -70,13 +64,10 @@
           position: absolute;
           top: 50%;
           left: 46%;
-          /* left: 50%;*/
           width: 0;
           height: 0;
           border-top: 8px solid transparent;
           border-bottom: 8px solid transparent;
-          /* border-left: 8px solid transparent;
-           border-right: 8px solid transparent;*/
           transform: translate(-50%, -50%);
         }
 
@@ -89,18 +80,15 @@
         }
       }
 
-
       &-prev {
-
         &::before {
-          /*border-bottom: 10px solid #000000;*/
-          border-right: 10px solid #000000;
-
+          border-width: 10px 10px 10px 0;
+          border-style: solid;
+          border-color: transparent black transparent transparent;
         }
 
         &:active::before {
-          /*border-bottom: 10px solid #EFEFEF;*/
-          border-right: 10px solid #EFEFEF;
+          border-right-color: #efefef;
         }
       }
 
@@ -108,13 +96,14 @@
         &::before {
           top: 50%;
           left: 54%;
-          /*border-top: 10px solid #000000;*/
-          border-left: 10px solid #000000;
+
+          border-width: 10px 0 10px 10px;
+          border-style: solid;
+          border-color: transparent transparent transparent black;
         }
 
         &:active::before {
-          border-left: 10px solid #EFEFEF;
-         /* border-top: 10px solid #EFEFEF;*/
+          border-left-color: #efefef;
         }
       }
     }
@@ -154,7 +143,9 @@
 }
 
 
-@include media-breakpoint-up(sm){}
+@include media-breakpoint-up(sm) {
+}
+
 /* from 576 to 767 */
 @include media-breakpoint-up(md) {
   .garage {
@@ -185,43 +176,45 @@
 
           &::before {
             left: 50%;
-            border-left: 8px solid transparent;
-            border-right: 8px solid transparent;
           }
         }
 
         &-prev {
-
           &::before {
-            top: 44%;
-            border-bottom: 10px solid #000000;
+            border-width: 0 8px 8px 8px;
+            border-color: transparent transparent black transparent;
           }
+
           &:active::before {
-            border-bottom: 10px solid #EFEFEF;
+            border-color: transparent transparent #efefef transparent;
           }
         }
 
         &-next {
           &::before {
-            top: 63%;
-            border-top: 10px solid #000000;
+            border-width: 8px 8px 0 8px;
+            border-color: black transparent transparent transparent;
           }
+
           &:active::before {
-           border-top: 10px solid #EFEFEF;
+            border-color: #efefef transparent transparent transparent;
           }
         }
       }
     }
+
     .garage-text {
       .article {
-        *margin:0;
+        *margin: 0;
       }
     }
   }
 }
 
 /* from 768 to 991 */
-@include media-breakpoint-up(lg){}
+@include media-breakpoint-up(lg) {
+}
+
 /* from 992 to 1200 */
 @include media-breakpoint-up(xl) {
   .swiper {
@@ -233,4 +226,5 @@
 }
 
 /* from 1200 to 1300 */
-@include media-breakpoint-up(xxl){}
+@include media-breakpoint-up(xxl) {
+}

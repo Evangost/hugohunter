@@ -1,68 +1,87 @@
 .section-articles {
-  margin: 80px 0 100px;
-}
+  margin: 60px 0 80px;
 
-.articles {
-  display: flex;
-  width: 100%;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
 
-  &-content {
+  .articles {
     display: flex;
-    height: 330px;
-    flex-flow: row nowrap;
+    width: 100%;
+    flex-flow: column nowrap;
     justify-content: flex-start;
+    align-items: flex-start;
     align-content: flex-start;
-    align-items: center;
-    border-top: 1px solid #BDBDBD;
-    border-bottom: 1px solid #BDBDBD;
-    margin-bottom: 30px;
 
-    &__text {
+    &-content {
       display: flex;
-      height: 240px;
-      flex-flow: column nowrap;
-      justify-content: space-between;
-      align-items: flex-start;
+      /* height: 330px;*/
+      /*flex-flow: row nowrap;*/
+      flex-flow: column wrap;
+      justify-content: flex-start;
       align-content: flex-start;
-      max-width: 670px;
-      margin-left: 40px;
+      align-items: center;
+      border-top: 1px solid #BDBDBD;
+      border-bottom: 1px solid #BDBDBD;
+      margin-bottom: 30px;
+      padding-top:20px ;
 
-      a {
-        color: #E31D1C;
-        font-size: 18px;
-        line-height: 22px;
-        font-weight: 500;
+      &__text {
+        display: flex;
+        //height: 240px;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-content: flex-start;
+        max-width: 670px;
+        /* margin-left: 40px;*/
+        &__image {
+          img {
+            /**/
+            width: auto;
+            margin-bottom: 15px;
+          }
 
-        &:hover {
-          font-weight: 600;
-          text-decoration: none;
         }
 
-        svg {
-          width: 18px;
-          height: 12px;
+        a {
           color: #E31D1C;
+          font-size: 18px;
+          line-height: 22px;
+          font-weight: 500;
+          margin-bottom: 15px;
+
+          &:hover {
+            font-weight: 600;
+            text-decoration: none;
+          }
+
+          svg {
+            width: 18px;
+            height: 12px;
+            color: #E31D1C;
+          }
         }
-      }
 
-      .data {
-        color: #828282;
-        line-height: 24px;
-        margin: 0;
-      }
+        .data {
+          color: #828282;
+          line-height: 24px;
+          margin: 15px 0 20px;
+        }
 
-      .subtitle {
-        margin: 0;
-        font-size: 24px;
-        line-height: 36px;
-      }
+        .subtitle {
+          /*margin: 0;*/
+          margin-bottom: 10px;
+          //font-size: 24px;
+          //line-height: 36px;
+          font-size: 18px;
+          line-height: 27px;
 
-      .article {
-        margin: 0;
+        }
+
+        .article {
+          font-size: 14px;
+          line-height: 21px;
+          /*margin: 0;*/
+          margin-bottom: 25px;
+        }
       }
     }
   }
@@ -71,4 +90,70 @@
     width: 193px;
     margin: 30px auto 0;
   }
+}
+
+/* from 576 to 767 */
+@include media-breakpoint-up(sm) {
+
+}
+
+/* from 768 to 991 */
+@include media-breakpoint-up(md) {
+
+}
+
+/* from 992 to 1200 */
+@include media-breakpoint-up(lg) {
+  .section-articles {
+    margin: 80px 0 100px;
+
+    .articles {
+      &-content {
+         height: 330px;
+        flex-flow: row nowrap;
+        &__text {
+          height: 240px;
+           margin-left: 40px;
+          a{
+            margin-bottom: 0;
+          }
+          &__image {
+            img {
+              /**/
+              width: auto;
+              margin-bottom: 0;
+            }
+            .data{
+              margin: 0;
+            }
+
+          }
+
+          .subtitle {
+            margin: 0;
+            font-size: 24px;
+            line-height: 36px;
+
+          }
+
+          .article {
+            font-size: 16px;
+            line-height: 24px;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* from 1200 to 1300 */
+@include media-breakpoint-up(xl) {
+
+}
+
+/*from 1300 to infinity*/
+@include media-breakpoint-up(xxl) {
+
 }
