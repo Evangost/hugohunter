@@ -51,32 +51,20 @@
 }
 
 .track-path {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
+  position: relative;
+
 
   .map-road {
-    display: inline-block;
     width: 100%;
   }
 
-  svg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 65px;
-    height: 35px;
-  }
-
   .car {
-    display: inline-block;
     position: absolute;
-    width: 65px;
-    height: 35px;
+    width: 35px;
+    top: 5.5%;
     right: 17%;
-    top: 349px;
     transform: rotate3d(0, 0, 0, -3deg);
+    animation: drive 5s ease 1 alternate;
   }
 }
 
@@ -91,6 +79,16 @@
     margin: 0 0 30px;
     font-size: 14px;
     line-height: 18px;
+  }
+}
+@keyframes drive {
+  0% {
+    top: 5.5%;
+    right: 17%;
+  }
+  100% {
+    top: 35.5%;
+    right: 58%;
   }
 }
 
@@ -145,8 +143,33 @@
 @include media-breakpoint-up(lg) {
   .service-text-main {
 
-
   }
+  .track-path {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    left: auto;
+    .map-road {
+      width: auto;
+    }
+    .car {
+      position: absolute;
+      top: 9.5%;
+      right: 16%;
+    }
+  }
+  @keyframes drive {
+    0% {
+      top: 9.5%;
+      right: 16%;
+    }
+    100% {
+      top: 46%;
+      right: 60%;
+    }
+  }
+
+
   .service-text-secondary {
     .article {
       width: 100%;
