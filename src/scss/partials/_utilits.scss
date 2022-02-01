@@ -183,7 +183,7 @@
 
   &-submit {
     padding: 15px 95px;
-    background: $main-first-color;
+    background: #cf1c31;
     border: none;
     outline: none !important;
     color: white;
@@ -193,12 +193,12 @@
     transition: $transition-base;
 
     &:hover {
-      background: #d01817;
+      background: #cf1c31;
       font-weight: 600;
     }
 
     &:active {
-      background: #c51716;
+      background: #cf1c31;
       font-weight: 700;
     }
 
@@ -247,12 +247,12 @@
 }
 
 .modal {
-  &-dialog {
-
+  &-open {
+    overflow: scroll;
   }
 
   &-content {
-   /* padding: 60px;*/
+
     padding: 40px;
     border-radius: 0;
 
@@ -380,7 +380,7 @@
 
     .modal {
       &-title {
-        color: #E31D1C;
+        color: #cf1c31;
         font-weight: 600;
         font-size: 28px;
         line-height: 42px;

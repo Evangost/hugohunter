@@ -1,5 +1,4 @@
 .section-privacy-policy {
-  /*margin-top: 125px;*/
   margin-top: 102px;
   margin-bottom: 100px;
 }
@@ -8,7 +7,7 @@
   width: 100%;
 
   .active {
-    color: #E31D1C;
+    color: #cf1c31;
   }
 
   .title {
@@ -23,7 +22,6 @@
 
 .links-block {
   border-bottom: 1px solid #BDBDBD;
-  /*border-right: 1px solid #BDBDBD;*/
   padding-bottom: 20px; /* for 320px*/
   a {
     text-align: center;
@@ -40,15 +38,12 @@
 
 
 .text-block {
-  /* padding: 30px 0 0 60px;*/
   padding-top: 30px;
 
 
   &__title {
     font-size: 22px;
     line-height: 26px;
-    /*font-size: 24px;
-    line-height: 29px;*/
     color: #000000;
     font-weight: 500;
     margin-bottom: 20px;
@@ -93,7 +88,7 @@
       left: 0;
       width: 8px;
       height: 8px;
-      background: #E31D1C;
+      background: #cf1c31;
       border-radius: 8px;
     }
   }

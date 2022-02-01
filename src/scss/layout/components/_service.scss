@@ -1,103 +1,159 @@
-.section-service{
+.section-service {
   margin-bottom: 80px;
-  /*margin-bottom: 120px;*/
 }
+
 .service {
 }
+
 .section-title {
-    margin-bottom: 20px;
-    padding-bottom: 14px;
-    border-bottom: 1px solid #E0E0E0;
-  }
-.service-text-main{
-  .subtitle{
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.service-text-main {
+  .subtitle {
     font-size: 30px;
     line-height: 36px;
   }
 
-  .article{
+  .article {
     max-width: 575px;
     font-size: 16px;
     line-height: 21px;
-   /* font-size: 20px;
-    line-height: 26px;*/
     margin: 20px 0;
   }
-  img{
-    display: inline-block;
-    width: 100%;
-    /*position: absolute;
-    top:0;
-    left: 50%;*/
-  }
 }
-.service-list{
+
+.service-list {
   padding: 0;
-/*  margin: 0 0 45px;*/
   margin: 0 0 20px;
 
- li{
-   position: relative;
-   padding-left: 18px;
+  li {
+    position: relative;
+    padding-left: 18px;
 
-   &:not(:last-child) {
-     margin-bottom: 10px;
-   }
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
 
-   &:before{
-     content: '';
-     position: absolute;
-     top: 6px;
-     left: 0;
-     width: 8px;
-     height: 8px;
-     background: #E31D1C;
-     border-radius: 8px;
-   }
- }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      background: #cf1c31;
+      border-radius: 8px;
+    }
+  }
 }
-.service-text-secondary{
-  .subtitle{
+
+.track-path {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+
+  .map-road {
+    display: inline-block;
+    width: 100%;
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 65px;
+    height: 35px;
+  }
+
+  .car {
+    display: inline-block;
+    position: absolute;
+    width: 65px;
+    height: 35px;
+    right: 17%;
+    top: 349px;
+    transform: rotate3d(0, 0, 0, -3deg);
+  }
+}
+
+.service-text-secondary {
+  .subtitle {
     font-size: 22px;
     line-height: 26px;
     margin-bottom: 10px;
   }
-  .article{
+
+  .article {
     margin: 0 0 30px;
     font-size: 14px;
     line-height: 18px;
   }
 }
-@include media-breakpoint-up(sm){}
+
+@include media-breakpoint-up(sm) {}
+
 /* from 576 to 767 */
-@include media-breakpoint-up(md){
-  .service-text-main{
+@include media-breakpoint-up(md) {
+  .service-text-main {
     flex: 0 0 auto;
-    img {
+  }
+
+  .track-path {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    left: auto;
+    width: max-content;
+
+    .map-road {
+      width: auto;
+    }
+
+    .car {
       position: absolute;
-      top: 0;
-      left: 50%;
+      top: 9.5%;
+      right: 16%;
+      animation: drive 5s ease 1 alternate;
     }
   }
-  .service-text-secondary{
-    .article{
+
+  .service-text-secondary {
+    .article {
       width: 198px;
       margin: 20px 0;
     }
   }
 }
+
+@keyframes drive {
+  0% {
+    top: 9.5%;
+    right: 16%;
+  }
+  100% {
+    top: 46%;
+    right: 60%;
+  }
+}
+
+
 /* from 768 to 991 */
 @include media-breakpoint-up(lg) {
   .service-text-main {
 
 
   }
-  .service-text-secondary{
-    .article{
+  .service-text-secondary {
+    .article {
       width: 100%;
     }
   }
 }
+
 /* from 992 to 1200 */
 @include media-breakpoint-up(xl) {
   .section-service {
@@ -124,18 +180,20 @@
       font-size: 22px;
       line-height: 26px;
     }
-    .article{
+
+    .article {
       width: 230px;
       font-size: 14px;
       line-height: 18px;
     }
   }
 }
+
 /* from 1200 to 1300 */
-@include media-breakpoint-up(xxl){
+@include media-breakpoint-up(xxl) {
   .service-text-secondary {
 
-    .article{
+    .article {
       width: 100%;
 
     }

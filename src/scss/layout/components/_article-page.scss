@@ -3,38 +3,33 @@
 }
 
   .back{
-    color: #E31D1C;;
+    color: #cf1c31;
       font-size: 18px;
       line-height: 22px;
       font-weight: 500;
       &:hover {
-        color: #E31D1C;
+        color: #cf1c31;
         font-weight: 600;
         text-decoration: none;
       }
     svg{
       width: 18px;
       height: 12px;
-      color:#E31D1C;
+      color:#cf1c31;
       transform: rotate(180deg)
     }
   }
 .article-wrapper {
-  //margin-left: 90px;
   margin-top: 40px;
   padding: 0 25px;
-  /*max-width: 1060px;*/
   .data {
     color: #828282;
     line-height: 24px;
     margin-bottom: 10px;
   }
   .title{
-   /* font-size: 32px;
-    line-height: 48px;*/
     font-size: 24px;
     line-height: 36px;
-    /*width: 790px;*/
     margin: 0 0 20px;
   }
   .article {
@@ -48,8 +43,6 @@
       margin: 15px 0 15px;
     }
   .subtitle{
-    /*font-size: 24px;
-    line-height: 36px;*/
     font-size: 22px;
     line-height: 33px;
     font-weight: 500;

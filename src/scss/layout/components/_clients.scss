@@ -24,7 +24,12 @@
     height: 225px;
     border: 1px solid #E0E0E0;
     img{
+      filter: grayscale(100%);
+      transition: $transition-base;
       width: 125px;
+      &:hover{
+        filter: none;
+      }
     }
   }
 }

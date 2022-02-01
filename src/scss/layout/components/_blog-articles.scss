@@ -12,8 +12,6 @@
 
     &-content {
       display: flex;
-      /* height: 330px;*/
-      /*flex-flow: row nowrap;*/
       flex-flow: column wrap;
       justify-content: flex-start;
       align-content: flex-start;
@@ -25,16 +23,14 @@
 
       &__text {
         display: flex;
-        //height: 240px;
         flex-flow: column nowrap;
         justify-content: space-between;
         align-items: flex-start;
         align-content: flex-start;
         max-width: 670px;
-        /* margin-left: 40px;*/
         &__image {
           img {
-            /**/
+
             width: auto;
             margin-bottom: 15px;
           }
@@ -42,7 +38,7 @@
         }
 
         a {
-          color: #E31D1C;
+          color: #cf1c31;
           font-size: 18px;
           line-height: 22px;
           font-weight: 500;
@@ -56,7 +52,7 @@
           svg {
             width: 18px;
             height: 12px;
-            color: #E31D1C;
+            color: #cf1c31;
           }
         }
 
@@ -67,10 +63,7 @@
         }
 
         .subtitle {
-          /*margin: 0;*/
           margin-bottom: 10px;
-          //font-size: 24px;
-          //line-height: 36px;
           font-size: 18px;
           line-height: 27px;
 
@@ -79,7 +72,6 @@
         .article {
           font-size: 14px;
           line-height: 21px;
-          /*margin: 0;*/
           margin-bottom: 25px;
         }
       }

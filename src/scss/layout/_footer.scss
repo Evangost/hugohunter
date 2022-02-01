@@ -12,50 +12,35 @@ footer.footer {
 
 .footer-block {
   display: flex;
-  /* flex-flow: row nowrap;*/
   flex-flow: column wrap;
   justify-content: center;
-  /* justify-content: flex-start;*/
   align-items: center;
   align-content: center;
-  /*height: 175px;*/
 
   .logo {
-    /*  width: 47%;*/
     margin-bottom: 30px;
 
     img {
       width: 222px;
       height: 29px;
-      /*width: 276px;
-      height: 36px;*/
     }
   }
 
   &__list {
     display: flex;
-    /* width: 33%;*/
     flex-flow: column nowrap;
-    /* flex-flow: row wrap;*/
     justify-content: center;
     align-items: center;
     align-content: center;
-    /*justify-content: space-between;*/
-    /* align-items: flex-start;
-     align-content: flex-start;*/
 
 
     .main-menu {
       display: flex;
-      /* height: 95px;*/
+
       flex-flow: column nowrap;
       justify-content: center;
       align-items: center;
       align-content: center;
-      /*  justify-content: space-between;
-        align-content: flex-start;
-        align-items: flex-start;*/
-      /* border-right: 1px solid #E0E0E0;*/
 
       li {
         margin-bottom: 15px;
@@ -63,8 +48,6 @@ footer.footer {
         a {
           font-size: 16px;
           line-height: 24px;
-          /* font-size: 14px;
-           line-height: 21px;*/
           text-decoration: none;
           color: #000000;
           font-weight: 400;
@@ -88,7 +71,6 @@ footer.footer {
 
   .button-site_fill {
     width: 206px;
-    /* width: 135px;*/
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
@@ -96,7 +78,6 @@ footer.footer {
     background-color: #FFFFFF;
     color: #000000;
     border-color: #000000;
-    /* margin-left: 90px;*/
     margin-bottom: 40px;
 
     &:hover {

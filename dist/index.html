@@ -6,7 +6,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
     <title>Main page</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="style.6b59e868f6e3e11d1f17.min.css" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="style.e8819ab6143b6314a867.min.css" rel="stylesheet"></head>
 <body class="loaded">
 <!-- BODY -->
 <div class="main-wrapper">
@@ -34,14 +34,14 @@
                             </picture>
                         </a>
                         <ul class="main-menu">
-                            <li><a href="#a-u">About us</a></li>
+                            <li><a href="#about_us">About us</a></li>
                             <li><a href="#">Services</a></li>
                             <li><a href="#" data-toggle="modal" data-target="#customersForm">Customers</a></li>
                             <li><a href="blog.html">Blog/News</a></li>
                             <li><a href="#c-b">Contact</a></li>
                         </ul>
                         <div class="header-action">
-                            <div class="phone"><a href="tel:+19192457265">(919) 245-7265 </a></div>
+                            <div class="phone"><a href="tel:+19193779392">(919) 377-9392 </a></div>
                             <button class="button-site button-site_sm button-site_outline">Request a call</button>
                             <button class="button-site button-site_sm button-site_fill" data-toggle="modal" data-target="#trackForm">Track</button>
                         </div>
@@ -77,9 +77,9 @@
             </div>
         </section>
 
-        <section class="section section-about-us">
+        <section id="about_us" class="section section-about-us">
             <div class="container">
-                <div id="a-u" class="about-us">
+                <div class="about-us">
                     <p class="section-title">about us</p>
 
                     <div class="section-input">
@@ -94,7 +94,7 @@
                                 Please visit our website and blog for latest news and updates.</p>
                         </div>
                         <div class="form-wrapper">
-                            <p class="form-wrapper__title">Specialized<span>Please, fill the form</span></p>
+                            <p class="form-wrapper__title"><!--Specialized--><span>Please, fill the form</span></p>
                             <form>
                                 <div class="row">
                                     <div class="col-md-6">
@@ -127,29 +127,29 @@
                 <div class="container">
                     <div class="statistic-wrapper">
                         <div class="statistic-info">
-                            <p class="numbers">30,000+</p>
+                            <p class="numbers"> <span>30000</span> +</p>
                             <p class="text">loads were delivered</p>
                         </div>
                         <div class="statistic-info">
-                            <p class="numbers">20,000000+</p>
+                            <p class="numbers"> <span>20000000</span> +</p>
                             <p class="text">miles are driven</p>
                         </div>
                         <div class="statistic-info">
-                            <p class="numbers">300+</p>
+                            <p class="numbers"><span>300</span> +</p>
                             <p class="text">satisfied customers</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="personal-offer">
+           <!-- <div class="personal-offer">
                 <p class="text">Get a personal offer</p>
                 <button class="button-site button-site_around">Personal offer
                     <svg>
                         <use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use>
                     </svg>
                 </button>
-            </div>
+            </div>-->
         </section>
 
         <section class="section section-advantage">
@@ -221,7 +221,7 @@
 
         <section class="section section-service">
             <div class="container">
-                <div class="service">
+                <div class="service position-relative">
                     <p class="section-title">Our Services</p>
 
                     <div class="row">
@@ -236,11 +236,6 @@
                                 <li>Haulage of oversize cargo</li>
                                 <li>Transportation and delivery of challenging, temperature-sensitive loads</li>
                             </ul>
-                            <picture>
-                                <img src="img/default.svg"
-                                     data-src="img/map.png" alt="loader" title="loader">
-                            </picture>
-
                             <div class="row service-text-secondary">
                                 <div class="col-md-6">
                                     <p class="subtitle">Less Than Truckload</p>
@@ -261,7 +256,22 @@
                                     </p>
                                 </div>
                             </div>
+
                         </div>
+                    </div>
+                    <div class="track-path">
+                        <picture>
+                            <img class="map-road" src="img/default.svg"
+                                 data-src="img/map_road.png" alt="loader" title="loader">
+                        </picture>
+
+                        <!--<svg>
+                            <use xlink:href="./img/spritemap.svg#sprite-car"></use>
+                        </svg>-->
+                        <picture>
+                            <img class="car" src="img/default.svg"
+                                 data-src="img/car.svg" alt="loader" title="loader">
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -523,14 +533,14 @@
 
                 <div class="footer-block__list">
                     <ul class="main-menu">
-                        <li><a href="#a-u">About us</a></li>
+                        <li><a href="index.html#about_us">About us</a></li>
                         <li><a href="#">Services</a></li>
                         <li><a href="#">Customers</a></li>
                     </ul>
                     <ul class="main-menu">
                         <li><a href="#">Blog/News</a></li>
-                        <li><a href="#c-b">Contact</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="index.html#c-b">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
                     </ul>
                     <ul class="main-menu">
                         <li><a class="social-media" href="#">Instagram</a></li>
@@ -874,5 +884,5 @@
     <picture><img src="img/loader.svg" alt="pre-loader"></picture>
 </div>
 <!-- BODY END   -->
-<script type="text/javascript" src="bundle.6b59e868f6e3e11d1f17.min.js"></script></body>
+<script type="text/javascript" src="bundle.e8819ab6143b6314a867.min.js"></script></body>
 </html>
