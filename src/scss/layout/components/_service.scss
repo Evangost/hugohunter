@@ -81,20 +81,68 @@
     line-height: 18px;
   }
 }
+
 @keyframes drive {
   0% {
     top: 5.5%;
     right: 17%;
   }
   100% {
-    top: 35.5%;
+    top: 34.5%;
     right: 58%;
   }
 }
 
-@include media-breakpoint-up(sm) {}
+
+@media screen and (min-width: 375px) {
+  .track-path {
+    .car {
+      position: absolute;
+      width: 35px;
+      top: 4.5%;
+      right: 17%;
+      transform: rotate3d(0, 0, 0, -3deg);
+      animation: drive 5s ease 1 alternate;
+    }
+  }
+  @keyframes drive {
+    0% {
+      top: 4.5%;
+      right: 17%;
+    }
+    100% {
+      top: 35.5%;
+      right: 57%;
+    }
+  }
+}
 
 /* from 576 to 767 */
+@include media-breakpoint-up(sm) {
+  .track-path {
+    .car {
+      position: absolute;
+      width: 35px;
+      top: 7.9%;
+      right: 17%;
+      transform: rotate3d(0, 0, 0, -3deg);
+      animation: drive 5s ease 1 alternate;
+    }
+  }
+  @keyframes drive {
+    0% {
+      top: 7.9%;
+      right: 17%;
+    }
+    100% {
+      top: 40%;
+      right: 59%;
+    }
+  }
+
+}
+
+/* from 768 to 991 */
 @include media-breakpoint-up(md) {
   .service-text-main {
     flex: 0 0 auto;
@@ -102,20 +150,30 @@
 
   .track-path {
     position: absolute;
-    top: 70px;
-    right: 0;
-    left: auto;
-    width: max-content;
+    top: 83px;
+    left: 209px;
+    width: 81%;
 
     .map-road {
-      width: auto;
+      width: 93%;
     }
 
     .car {
       position: absolute;
-      top: 9.5%;
-      right: 16%;
+      top: 8.5%;
+      right: 24%;
       animation: drive 5s ease 1 alternate;
+    }
+
+    @keyframes drive {
+      0% {
+        top: 8.5%;
+        right: 24%;
+      }
+      100% {
+        top: 39.5%;
+        right: 62%;
+      }
     }
   }
 
@@ -127,45 +185,35 @@
   }
 }
 
-@keyframes drive {
-  0% {
-    top: 9.5%;
-    right: 16%;
-  }
-  100% {
-    top: 46%;
-    right: 60%;
-  }
-}
 
-
-/* from 768 to 991 */
+/* from 992 to 1200 */
 @include media-breakpoint-up(lg) {
   .service-text-main {
 
   }
   .track-path {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    left: auto;
+    top: 8.5%;
+    left: 29%;
+    right: auto;
+
     .map-road {
-      width: auto;
+      width: 93%;
     }
+
     .car {
       position: absolute;
-      top: 9.5%;
-      right: 16%;
+      top: 9%;
+      right: 24%;
     }
   }
   @keyframes drive {
     0% {
-      top: 9.5%;
-      right: 16%;
+      top: 9%;
+      right: 24%;
     }
     100% {
-      top: 46%;
-      right: 60%;
+      top: 42%;
+      right: 63%;
     }
   }
 
@@ -177,12 +225,18 @@
   }
 }
 
-/* from 992 to 1200 */
+/* from 1200 to 1300 */
 @include media-breakpoint-up(xl) {
   .section-service {
     margin-bottom: 120px;
   }
-
+  .track-path {
+    .car {
+      position: absolute;
+      top: 10.5%;
+      right: 24%;
+    }
+  }
   .service-text-main {
     .subtitle {
       font-size: 48px;
@@ -210,9 +264,19 @@
       line-height: 18px;
     }
   }
+  @keyframes drive {
+    0% {
+      top: 10.5%;
+      right: 24%;
+    }
+    100% {
+      top: 42.5%;
+      right: 63%;
+    }
+  }
 }
 
-/* from 1200 to 1300 */
+/*from 1300 to infinity*/
 @include media-breakpoint-up(xxl) {
   .service-text-secondary {
 
@@ -222,3 +286,5 @@
     }
   }
 }
+
+

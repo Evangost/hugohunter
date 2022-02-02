@@ -35,6 +35,24 @@ $(function () {
         }
     })();
 
+    (function () {
+        let numbersCounter = document.querySelectorAll('.statistic-info .numbers');
+
+        if (numbersCounter) {
+            $('.numbers span').each(function () {
+                $(this).prop('Counter',0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 4000,
+                    easing: 'swing',
+                    step: function (now) {
+                        $(this).text(Math.ceil(now));
+                    }
+                });
+            });
+        }
+    })();
+
     // Swiper slider
     if ($('.swiper-container').length) {
         let slider;
@@ -165,18 +183,9 @@ $(function () {
 });
 
 /*Counter*/
+
+
+
 $(document).ready(function() {
-    $('.numbers span').each(function () {
-        $(this).prop('Counter',0).animate({
-            Counter: $(this).text()
-        }, {
-            duration: 4000,
-            easing: 'swing',
-            step: function (now) {
-                $(this).text(Math.ceil(now));
-            }
-        });
-    });
+
 });
-
-

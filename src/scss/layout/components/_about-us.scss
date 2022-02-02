@@ -148,6 +148,10 @@
     font-weight: 400;
     color: #000000;
     margin-bottom: 4px;
+
+    &::after {
+      content: '+';
+    }
   }
 
   .text {
