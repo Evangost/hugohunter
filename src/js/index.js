@@ -8,6 +8,119 @@ import 'popper.js';
 import Swiper from 'swiper/dist/js/swiper.min';
 import 'select2';
 import intlTelInput from 'intl-tel-input';
+const jQuery = $;
+
+$.fn.visibilityListener = function(options) {
+    // Defaults vars
+    var defaults = {
+        checkOnLoad: true,
+        frequency: 200
+    };
+    // Extend our default options with those provided.
+    var opts = jQuery.extend(defaults, options);
+
+    var elts = jQuery(this);
+    var visibleElements = [];
+    var completeVisibleElements = [];
+    var hiddenElements = [];
+
+    var fireEvents = function()
+    {
+        var tmpVisibleElements = [];
+        var tmpCompleteVisibleElements = [];
+        var tmpHiddenElements = [];
+
+        elts.each(function(it) {
+            var offsetNO = jQuery(this).offset();
+            var offsetNE = {
+                top: offsetNO.top,
+                left: offsetNO.left + jQuery(this).width()
+            };
+            var offsetSO = {
+                top: offsetNO.top + jQuery(this).height(),
+                left: offsetNO.left
+            };
+            var offsetSE = {
+                top: offsetNO.top + jQuery(this).height(),
+                left: offsetNO.left + jQuery(this).width()
+            };
+            if (pointVisible(offsetNO) || pointVisible(offsetNE) || pointVisible(offsetSO) || pointVisible(offsetSE)) {
+                if (jQuery(this).is(':visible')) {
+                    if (jQuery.inArray(it, visibleElements) === -1) {
+                        jQuery(this).trigger('visible');
+                        console.log('visible');
+                    }
+                    tmpVisibleElements.push(it);
+                    if (pointVisible(offsetNO) && pointVisible(offsetNE) && pointVisible(offsetSO) && pointVisible(offsetSE)) {
+                        if (jQuery.inArray(it, completeVisibleElements) === -1) {
+                            jQuery(this).trigger('fullyvisible');
+                        }
+                        tmpCompleteVisibleElements.push(it);
+                    } else {
+                        if (jQuery.inArray(it, completeVisibleElements) === -1) {
+                            jQuery(this).trigger('partiallyvisible');
+                        }
+                    }
+                }
+            } else {
+                if (jQuery(this).is(':visible')) {
+                    if (jQuery.inArray(it, hiddenElements) === -1) {
+                        jQuery(this).trigger('hidden');
+                    }
+                    tmpHiddenElements.push(it);
+                }
+            }
+        });
+        visibleElements = tmpVisibleElements.slice();
+        completeVisibleElements = tmpCompleteVisibleElements.slice();
+        hiddenElements = tmpHiddenElements.slice();
+    }
+
+    var pointVisible = function(point) {
+        if (point.left > jQuery(document).scrollLeft()
+            && point.left < jQuery(document).scrollLeft() + jQuery(window).width()
+            && point.top > jQuery(document).scrollTop()
+            && point.top < jQuery(document).scrollTop() + jQuery(window).height()
+        ) {
+            return true;
+        }
+        return false;
+    }
+
+    if (!opts.checkOnLoad) {
+        elts.each(function(it) {
+            var offsetNO = jQuery(this).offset();
+            var offsetNE = {
+                top: offsetNO.top,
+                left: offsetNO.left + jQuery(this).width()
+            }
+            var offsetSO = {
+                top: offsetNO.top + jQuery(this).height(),
+                left: offsetNO.left
+            }
+            var offsetSE = {
+                top: offsetNO.top + jQuery(this).height(),
+                left: offsetNO.left + jQuery(this).width()
+            }
+            if (pointVisible(offsetNO) || pointVisible(offsetNE) || pointVisible(offsetSO) || pointVisible(offsetSE)) {
+                if (jQuery(this).is(':visible')) {
+                    visibleElements.push(it);
+                    if (pointVisible(offsetNO) && pointVisible(offsetNE) && pointVisible(offsetSO) && pointVisible(offsetSE)) {
+                        completeVisibleElements.push(it);
+                    }
+                }
+            } else {
+                if (jQuery(this).is(':visible')) {
+                    hiddenElements.push(it);
+                }
+            }
+        });
+    }
+
+    window.setInterval(function() {
+        fireEvents();
+    }, opts.frequency);
+}
 
 $(window).on('load', function () {
     let b = $('body');
@@ -35,7 +148,13 @@ $(function () {
         }
     })();
 
-    (function () {
+    $(document).ready(function() {
+        $('.statistic-wrapper').visibilityListener();
+        $('#car-path').visibilityListener();
+    });
+
+    // Add event listener
+    $('.statistic-wrapper').on('visible', function() {
         let numbersCounter = document.querySelectorAll('.statistic-info .numbers');
 
         if (numbersCounter) {
@@ -51,7 +170,34 @@ $(function () {
                 });
             });
         }
-    })();
+    });
+
+    $('#car-path').on('visible', function() {
+        $('#car-path').addClass('car-active');
+    })
+
+    $('#car-path').on('hidden', function() {
+        $('#car-path').removeClass('car-active');
+    })
+
+
+    // (function () {
+    //     let numbersCounter = document.querySelectorAll('.statistic-info .numbers');
+    //
+    //     if (numbersCounter) {
+    //         $('.numbers span').each(function () {
+    //             $(this).prop('Counter',0).animate({
+    //                 Counter: $(this).text()
+    //             }, {
+    //                 duration: 4000,
+    //                 easing: 'swing',
+    //                 step: function (now) {
+    //                     $(this).text(Math.ceil(now));
+    //                 }
+    //             });
+    //         });
+    //     }
+    // })();
 
     // Swiper slider
     if ($('.swiper-container').length) {
@@ -189,3 +335,54 @@ $(function () {
 $(document).ready(function() {
 
 });
+
+////////////////////////////////////////////////////////
+
+
+
+/*/ /Получаем нужный элемент*/
+/*
+var element = document.querySelector('#counter-wrap');
+
+var Visible = function (target) {
+    // Все позиции элемента
+    var targetPosition = {
+            top: window.pageYOffset + target.getBoundingClientRect().top,
+            left: window.pageXOffset + target.getBoundingClientRect().left,
+            right: window.pageXOffset + target.getBoundingClientRect().right,
+            bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+        },
+        // Получаем позиции окна
+        windowPosition = {
+            top: window.pageYOffset,
+            left: window.pageXOffset,
+            right: window.pageXOffset + document.documentElement.clientWidth,
+            bottom: window.pageYOffset + document.documentElement.clientHeight
+        };
+
+    if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
+        targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
+        targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
+        targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
+        // Если элемент полностью видно, то запускаем следующий код
+    } else {
+        // Если элемент не видно, то запускаем этот код
+        console.clear();
+    }
+};
+*/
+
+// Запускаем функцию при прокрутке страницы
+/*window.addEventListener('scroll', function() {
+    Visible (element);
+});
+
+// А также запустим функцию сразу. А то вдруг, элемент изначально видно
+Visible (element);*/
+
+
+/*
+let wrapElement = document.getElementById('counter-wrap');
+let domRect = wrapElement.getBoundingClientRect();
+window.testElement = wrapElement;
+console.log(domRect);*/
