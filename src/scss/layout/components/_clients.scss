@@ -12,7 +12,8 @@
   flex-flow: row wrap;
   width: 100%;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
+  height: 100%;
   align-content: center;
   &__image{
     display: inline-flex;
@@ -20,13 +21,13 @@
     justify-content: center;
     align-content: center;
     align-items: center;
-    width:140px;
-    height: 225px;
+    width:310px;
+    height: 205px;
     border: 1px solid #E0E0E0;
     img{
       filter: grayscale(100%);
       transition: $transition-base;
-      width: 125px;
+      width: auto;
       &:hover{
         filter: none;
       }
@@ -47,10 +48,9 @@
 
     .clients {
       &__image {
-        width: 340px;
 
         img {
-          width: 300px;
+
         }
       }
     }
@@ -65,7 +65,6 @@
 
 .clients {
   &__image{
-    width:413px;
     img{
       width: auto;
     }

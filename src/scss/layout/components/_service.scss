@@ -63,13 +63,12 @@
     width: 35px;
     top: 5.5%;
     right: 17%;
-
+    transition: $transition-base;
   }
-
 }
 .car-active{
-  transform: rotate3d(0, 0, 0, -3deg);
-  animation: drive 5s ease 1 alternate !important;
+  //transform: rotate3d(0, 0, 0, 0deg);
+  animation: drive 10s linear 0s infinite normal;
 }
 .service-text-secondary {
   .subtitle {
@@ -90,9 +89,23 @@
     top: 5.5%;
     right: 17%;
   }
-  100% {
+  50% {
     top: 34.5%;
     right: 58%;
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  55% {
+    top: 34.5%;
+    right: 58%;
+    transform: rotate3d(10, 17, 0, 180deg);
+  }
+  95% {
+    top: 5.5%;
+    right: 17%;
+    transform: rotate3d(10, 17, 0, 180deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 0, 0deg);
   }
 }
 
@@ -104,22 +117,33 @@
       width: 35px;
       top: 4.5%;
       right: 17%;
-      //transform: rotate3d(0, 0, 0, -3deg);
-      //animation: drive 5s ease 1 alternate;
+
     }
-    /*.car-active{
-      transform: rotate3d(0, 0, 0, -3deg);
-      animation: drive 5s ease 1 alternate;
-    }*/
+
   }
+
   @keyframes drive {
     0% {
       top: 4.5%;
       right: 17%;
     }
-    100% {
+    50% {
       top: 35.5%;
       right: 57%;
+      transform: rotate3d(0, 0, 0, 0deg);
+    }
+    55% {
+      top: 35.5%;
+      right: 57%;
+      transform: rotate3d(10, 17, 0, 180deg);
+    }
+    95% {
+      top: 4.5%;
+      right: 17%;
+      transform: rotate3d(10, 17, 0, 180deg);
+    }
+    100% {
+      transform: rotate3d(0, 0, 0, 0deg);
     }
   }
 }
@@ -132,25 +156,35 @@
       width: 35px;
       top: 7.9%;
       right: 17%;
-      //transform: rotate3d(0, 0, 0, -3deg);
-      //animation: drive 5s ease 1 alternate;
+
     }
-    /*.car-active{
-      transform: rotate3d(0, 0, 0, -3deg);
-      animation: drive 5s ease 1 alternate;
-    }*/
+
   }
+
   @keyframes drive {
     0% {
       top: 7.9%;
       right: 17%;
     }
-    100% {
+    50% {
       top: 40%;
       right: 59%;
+      transform: rotate3d(0, 0, 0, 0deg);
+    }
+    55% {
+      top: 40%;
+      right: 59%;
+      transform: rotate3d(10, 17, 0, 180deg);
+    }
+    95% {
+      top: 7.9%;
+      right: 17%;
+      transform: rotate3d(10, 17, 0, 180deg);
+    }
+    100% {
+      transform: rotate3d(0, 0, 0, 0deg);
     }
   }
-
 }
 
 /* from 768 to 991 */
@@ -173,25 +207,35 @@
       position: absolute;
       top: 8.5%;
       right: 24%;
-     // animation: drive 5s ease 1 alternate;
+
     }
-    /*.car-active{
-      transform: rotate3d(0, 0, 0, -3deg);
-      animation: drive 5s ease 1 alternate;
-    }*/
-  }
-    @keyframes drive {
-      0% {
-        top: 8.5%;
-        right: 24%;
-      }
-      100% {
-        top: 39.5%;
-        right: 62%;
-      }
 
   }
 
+  @keyframes drive {
+    0% {
+      top: 8.5%;
+      right: 24%;
+    }
+    50% {
+      top: 39.5%;
+      right: 62%;
+      transform: rotate3d(0, 0, 0, 0deg);
+    }
+    55% {
+      top: 39.5%;
+      right: 62%;
+      transform: rotate3d(10, 17, 0, 180deg);
+    }
+    95% {
+      top: 8.5%;
+      right: 24%;
+      transform: rotate3d(10, 17, 0, 180deg);
+    }
+    100% {
+      transform: rotate3d(0, 0, 0, 0deg);
+    }
+  }
   .service-text-secondary {
     .article {
       width: 198px;
@@ -220,22 +264,33 @@
       top: 9%;
       right: 24%;
     }
-    /*.car-active{
-      transform: rotate3d(0, 0, 0, -3deg);
-      animation: drive 5s ease 1 alternate;
-    }*/
+
   }
+
   @keyframes drive {
     0% {
       top: 9%;
       right: 24%;
     }
-    100% {
+    50% {
       top: 42%;
       right: 63%;
+      transform: rotate3d(0, 0, 0, 0deg);
+    }
+    55% {
+      top: 42%;
+      right: 63%;
+      transform: rotate3d(10, 17, 0, 180deg);
+    }
+    95% {
+      top: 9%;
+      right: 24%;
+      transform: rotate3d(10, 17, 0, 180deg);
+    }
+    100% {
+      transform: rotate3d(0, 0, 0, 0deg);
     }
   }
-
 
   .service-text-secondary {
     .article {
@@ -255,11 +310,6 @@
       top: 10.5%;
       right: 24%;
     }
-    /*.car-active{
-      transform: rotate3d(0, 0, 0, -3deg);
-      animation: drive 5s ease 1 alternate;
-    }*/
-
   }
   .service-text-main {
     .subtitle {
@@ -288,14 +338,29 @@
       line-height: 18px;
     }
   }
+
   @keyframes drive {
     0% {
       top: 10.5%;
       right: 24%;
     }
-    100% {
-      top: 42.5%;
+    50% {
+      top: 42%;
       right: 63%;
+      transform: rotate3d(0, 0, 0, 0deg);
+    }
+    55% {
+      top: 42%;
+      right: 63%;
+      transform: rotate3d(10, 17, 0, 180deg);
+    }
+    95% {
+      top: 10.5%;
+      right: 24%;
+      transform: rotate3d(10, 17, 0, 180deg);
+    }
+    100% {
+      transform: rotate3d(0, 0, 0, 0deg);
     }
   }
 }
@@ -310,5 +375,3 @@
     }
   }
 }
-
-

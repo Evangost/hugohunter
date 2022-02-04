@@ -172,14 +172,15 @@ $(function () {
         }
     });
 
-    $('#car-path').on('visible', function() {
+    let carPath = $('#car-path');
+
+    carPath.on('visible', function() {
         $('#car-path').addClass('car-active');
-    })
+    });
 
-    $('#car-path').on('hidden', function() {
+    carPath.on('hidden', function() {
         $('#car-path').removeClass('car-active');
-    })
-
+    });
 
     // (function () {
     //     let numbersCounter = document.querySelectorAll('.statistic-info .numbers');
