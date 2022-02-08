@@ -48,7 +48,7 @@ $.fn.visibilityListener = function(options) {
                 if (jQuery(this).is(':visible')) {
                     if (jQuery.inArray(it, visibleElements) === -1) {
                         jQuery(this).trigger('visible');
-                        console.log('visible');
+                        /*console.log('visible');*/
                     }
                     tmpVisibleElements.push(it);
                     if (pointVisible(offsetNO) && pointVisible(offsetNE) && pointVisible(offsetSO) && pointVisible(offsetSE)) {
