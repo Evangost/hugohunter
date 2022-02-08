@@ -6,13 +6,16 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const fs = require('fs');
+const CopyPlugin = require("copy-webpack-plugin");
 
 const pages = fs
     .readdirSync(path.resolve(__dirname, 'src'))
     .filter(fileName => fileName.endsWith('.html'));
 
 module.exports = {
-    entry: {main: "./src/js/index.js"},
+    entry: {
+        main: "./src/js/index.js",
+    },
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "bundle.[hash].min.js"
@@ -64,6 +67,11 @@ module.exports = {
         ],
     },
     plugins: [
+        new CopyPlugin({
+            patterns: [
+                { from: "./src/js/tel-utils.js", to: "utils.js" },
+            ],
+        }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: "style.[hash].min.css",

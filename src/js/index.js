@@ -291,7 +291,7 @@ $(function () {
                         callback(countryCode);
                     });
                 },
-                utilsScript: "../../node_modules/intl-tel-input/build/js/utils.js",
+                utilsScript: "/utils.js",
             });
         });
 
