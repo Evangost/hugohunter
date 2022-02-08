@@ -291,7 +291,7 @@ $(function () {
                         callback(countryCode);
                     });
                 },
-                utilsScript: "/utils.js",
+                utilsScript: "utils.js",
             });
         });
 
