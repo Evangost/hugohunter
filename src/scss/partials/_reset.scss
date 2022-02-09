@@ -20,6 +20,7 @@ html, body {
   font-family: $font-family-base;
   font-size: $font-size-default;
   scroll-behavior: smooth;
+  padding-right: 0 !important;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
