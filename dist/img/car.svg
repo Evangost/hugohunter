@@ -1,0 +1,16 @@
+<svg width="75" height="65" viewBox="0 0 75 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M25.1332 48.4723L12.9298 27.3354C12.8756 27.2415 12.9078 27.1215 13.0016 27.0673L57.4697 1.39368C57.5635 1.33947 57.6836 1.37164 57.7378 1.46552L69.9412 22.6024L32.12 44.4385M25.1332 48.4723L29.0597 46.2054M25.1332 48.4723L22.708 49.8725" stroke="#E31D1C" stroke-width="0.981427" stroke-linecap="round"/>
+<line x1="0.490714" y1="-0.490714" x2="43.5148" y2="-0.490714" transform="matrix(-0.866025 0.5 0.5 0.866025 65.4116 21.2916)" stroke="#E31D1C" stroke-width="0.981427" stroke-linecap="round"/>
+<path d="M67.6907 23.9029L70.1262 28.1213C70.1804 28.2152 70.1482 28.3352 70.0543 28.3894L67.4527 29.8915" stroke="#E31D1C" stroke-width="0.981427"/>
+<path d="M50.9714 39.4839L29.6068 51.8188" stroke="#E31D1C" stroke-width="0.981427" stroke-linecap="round"/>
+<path d="M20.1553 56.1202L15.2473 58.9539L10.48 50.6968C10.2762 50.1215 9.95418 48.5059 10.2965 46.6452C10.2432 46.5528 9.09947 40.3046 8.53427 37.1921" stroke="#E31D1C" stroke-width="0.981427" stroke-linecap="round"/>
+<path d="M16.0393 32.8577L7.26248 37.925" stroke="#E31D1C" stroke-width="0.981427" stroke-linecap="round"/>
+<path d="M12.0824 53.4679L14.2766 52.201" stroke="#E31D1C" stroke-width="0.981427" stroke-linecap="round"/>
+<path d="M9.32341 41.3565L15.4441 37.8227L18.0111 42.2688L10.2736 46.7361" stroke="#E31D1C" stroke-width="0.981427"/>
+<circle r="4.84329" transform="matrix(-0.866025 0.5 0.5 0.866025 63.2429 31.9359)" stroke="#E31D1C" stroke-width="0.981427"/>
+<circle r="4.84329" transform="matrix(-0.866025 0.5 0.5 0.866025 54.9297 36.737)" stroke="#E31D1C" stroke-width="0.981427"/>
+<circle r="4.84329" transform="matrix(-0.866025 0.5 0.5 0.866025 24.7871 54.1393)" stroke="#E31D1C" stroke-width="0.981427"/>
+<circle r="1.13348" transform="matrix(-0.866025 0.5 0.5 0.866025 63.4005 32.076)" fill="#E31D1C"/>
+<circle r="1.13348" transform="matrix(-0.866025 0.5 0.5 0.866025 55.0873 36.8772)" fill="#E31D1C"/>
+<circle r="1.13348" transform="matrix(-0.866025 0.5 0.5 0.866025 24.9447 54.279)" fill="#E31D1C"/>
+</svg>
