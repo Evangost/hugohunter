@@ -298,7 +298,7 @@ $(function () {
     }
 
     // Select2
-    if ($('.select-js').length) {
+    /*if ($('.select-js').length) {
         const select = document.querySelectorAll('.select-js');
 
         select.forEach(function (e, i) {
@@ -306,7 +306,7 @@ $(function () {
                 minimumResultsForSearch: Infinity,
             });
         });
-    }
+    }*/
 
     // Lazy load observer
     const imagesAll = document.querySelectorAll('img[data-src]');
